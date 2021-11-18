@@ -1,4 +1,4 @@
 others
 **/*.zip
 **/build/**
-**/.clangd/**
+**/.cache/**
