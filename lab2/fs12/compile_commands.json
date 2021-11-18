@@ -1,0 +1,128 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/main.c.o",
+      "main.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/main.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/main.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/src/fs.c.o",
+      "src/fs.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/src/fs.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/src/fs.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/src/engine/cat.c.o",
+      "src/engine/cat.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/src/engine/cat.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/src/engine/cat.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/src/engine/engine.c.o",
+      "src/engine/engine.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/src/engine/engine.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/src/engine/engine.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/src/engine/exit.c.o",
+      "src/engine/exit.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/src/engine/exit.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/src/engine/exit.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/src/engine/ls.c.o",
+      "src/engine/ls.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/src/engine/ls.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/src/engine/ls.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-g",
+      "-c",
+      "-Iinclude",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-o",
+      "build/src/nasm/uprint.c.o",
+      "src/nasm/uprint.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/src/nasm/uprint.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/build/src/nasm/uprint.c.o"
+  }
+]

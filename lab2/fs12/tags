@@ -1,0 +1,296 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/xiayi/Mine/code/workspace/oselab/lab2/fs12/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+$(BUILD_DIR)/%.asm.o	Makefile	/^$(BUILD_DIR)\/%.asm.o: %.asm$/;"	t
+$(BUILD_DIR)/%.c.o	Makefile	/^$(BUILD_DIR)\/%.c.o: %.c$/;"	t
+$(TARGET)	Makefile	/^$(TARGET): $(OBJS_C) $(OBJS_ASM)$/;"	t
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:0.arguments
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:1.arguments
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:2.arguments
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:3.arguments
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:4.arguments
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:5.arguments
+0	compile_commands.json	/^      "\/usr\/bin\/gcc",$/;"	s	array:6.arguments
+0	compile_commands.json	/^  {$/;"	o
+1	compile_commands.json	/^      "-m32",$/;"	s	array:0.arguments
+1	compile_commands.json	/^      "-m32",$/;"	s	array:1.arguments
+1	compile_commands.json	/^      "-m32",$/;"	s	array:2.arguments
+1	compile_commands.json	/^      "-m32",$/;"	s	array:3.arguments
+1	compile_commands.json	/^      "-m32",$/;"	s	array:4.arguments
+1	compile_commands.json	/^      "-m32",$/;"	s	array:5.arguments
+1	compile_commands.json	/^      "-m32",$/;"	s	array:6.arguments
+1	compile_commands.json	/^  {$/;"	o
+10	compile_commands.json	/^      "main.c"$/;"	s	array:0.arguments
+10	compile_commands.json	/^      "src\/engine\/cat.c"$/;"	s	array:2.arguments
+10	compile_commands.json	/^      "src\/engine\/engine.c"$/;"	s	array:3.arguments
+10	compile_commands.json	/^      "src\/engine\/exit.c"$/;"	s	array:4.arguments
+10	compile_commands.json	/^      "src\/engine\/ls.c"$/;"	s	array:5.arguments
+10	compile_commands.json	/^      "src\/fs.c"$/;"	s	array:1.arguments
+10	compile_commands.json	/^      "src\/nasm\/uprint.c"$/;"	s	array:6.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:0.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:1.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:2.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:3.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:4.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:5.arguments
+2	compile_commands.json	/^      "-g",$/;"	s	array:6.arguments
+2	compile_commands.json	/^  {$/;"	o
+3	compile_commands.json	/^      "-c",$/;"	s	array:0.arguments
+3	compile_commands.json	/^      "-c",$/;"	s	array:1.arguments
+3	compile_commands.json	/^      "-c",$/;"	s	array:2.arguments
+3	compile_commands.json	/^      "-c",$/;"	s	array:3.arguments
+3	compile_commands.json	/^      "-c",$/;"	s	array:4.arguments
+3	compile_commands.json	/^      "-c",$/;"	s	array:5.arguments
+3	compile_commands.json	/^      "-c",$/;"	s	array:6.arguments
+3	compile_commands.json	/^  {$/;"	o
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:0.arguments
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:1.arguments
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:2.arguments
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:3.arguments
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:4.arguments
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:5.arguments
+4	compile_commands.json	/^      "-Iinclude",$/;"	s	array:6.arguments
+4	compile_commands.json	/^  {$/;"	o
+5	compile_commands.json	/^      "-O2",$/;"	s	array:0.arguments
+5	compile_commands.json	/^      "-O2",$/;"	s	array:1.arguments
+5	compile_commands.json	/^      "-O2",$/;"	s	array:2.arguments
+5	compile_commands.json	/^      "-O2",$/;"	s	array:3.arguments
+5	compile_commands.json	/^      "-O2",$/;"	s	array:4.arguments
+5	compile_commands.json	/^      "-O2",$/;"	s	array:5.arguments
+5	compile_commands.json	/^      "-O2",$/;"	s	array:6.arguments
+5	compile_commands.json	/^  {$/;"	o
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:0.arguments
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:1.arguments
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:2.arguments
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:3.arguments
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:4.arguments
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:5.arguments
+6	compile_commands.json	/^      "-Wall",$/;"	s	array:6.arguments
+6	compile_commands.json	/^  {$/;"	o
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:0.arguments
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:1.arguments
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:2.arguments
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:3.arguments
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:4.arguments
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:5.arguments
+7	compile_commands.json	/^      "-Werror",$/;"	s	array:6.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:0.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:1.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:2.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:3.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:4.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:5.arguments
+8	compile_commands.json	/^      "-o",$/;"	s	array:6.arguments
+9	compile_commands.json	/^      "build\/main.c.o",$/;"	s	array:0.arguments
+9	compile_commands.json	/^      "build\/src\/engine\/cat.c.o",$/;"	s	array:2.arguments
+9	compile_commands.json	/^      "build\/src\/engine\/engine.c.o",$/;"	s	array:3.arguments
+9	compile_commands.json	/^      "build\/src\/engine\/exit.c.o",$/;"	s	array:4.arguments
+9	compile_commands.json	/^      "build\/src\/engine\/ls.c.o",$/;"	s	array:5.arguments
+9	compile_commands.json	/^      "build\/src\/fs.c.o",$/;"	s	array:1.arguments
+9	compile_commands.json	/^      "build\/src\/nasm\/uprint.c.o",$/;"	s	array:6.arguments
+ARRLEN	include/common.h	/^#define ARRLEN(/;"	d
+ASNI_FG_BLUE	include/common.h	/^#define ASNI_FG_BLUE /;"	d
+ASNI_FG_GREEN	include/common.h	/^#define ASNI_FG_GREEN /;"	d
+ASNI_FG_RED	include/common.h	/^#define ASNI_FG_RED /;"	d
+ASNI_NONE	include/common.h	/^#define ASNI_NONE /;"	d
+BPB_t	include/fs.h	/^} BPB_t;$/;"	t	typeref:struct:bpb
+BUILD_DIR	Makefile	/^BUILD_DIR := build$/;"	m
+CC	Makefile	/^CC        := gcc$/;"	m
+CDIRINFO_t	include/fs.h	/^} CDIRINFO_t; $/;"	t	typeref:struct:cur_dir_info
+CDI_NAME_SIZE	include/fs.h	/^#define CDI_NAME_SIZE /;"	d
+CFILEINFO_t	include/fs.h	/^} CFILEINFO_t;$/;"	t	typeref:struct:cur_file_info
+CFLAGS	Makefile	/^CFLAGS    := -m32 -g -c -I$(INC_DIR) -O2 -MMD -Wall -Werror$/;"	m
+CONTINUE	include/engine.h	/^#define CONTINUE /;"	d
+DELETE_NAME	include/common.h	/^#define DELETE_NAME /;"	d
+DIR_ATTR	include/common.h	/^#define DIR_ATTR /;"	d
+END_NAME	include/common.h	/^#define END_NAME /;"	d
+FAILURE	include/common.h	/^#define FAILURE /;"	d
+FALSE	include/common.h	/^#define FALSE /;"	d
+FILE_ATTR	include/common.h	/^#define FILE_ATTR /;"	d
+FINAL_CLUS	include/common.h	/^#define FINAL_CLUS /;"	d
+FINFO_t	include/fs.h	/^} FINFO_t;$/;"	t	typeref:struct:file_info
+IMG_DIR	Makefile	/^IMG_DIR   := fat12$/;"	m
+IMG_NAME	Makefile	/^IMG_NAME  := a.img$/;"	m
+INC_DIR	Makefile	/^INC_DIR   := include$/;"	m
+KANJI_NAME	include/common.h	/^#define KANJI_NAME /;"	d
+LD	Makefile	/^LD        := gcc$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS   := -m32 -g -O2 -lreadline $/;"	m
+LIB_DIR	Makefile	/^LIB_DIR   := src$/;"	m
+MOUNT_DIR	Makefile	/^MOUNT_DIR := data$/;"	m
+NASM	Makefile	/^NASM      := nasm$/;"	m
+NASMFLAGS	Makefile	/^NASMFLAGS := -f elf32 -g -I$(INC_DIR) $/;"	m
+NO_ARG	src/engine/ls.c	/^#define NO_ARG /;"	d	file:
+N_ARG	src/engine/ls.c	/^#define N_ARG /;"	d	file:
+N_CMD	src/engine/engine.c	/^#define N_CMD /;"	d	file:
+OBJS_ASM	Makefile	/^OBJS_ASM  := $(patsubst %.asm, $(BUILD_DIR)\/%.asm.o, $(SRCS_ASM))$/;"	m
+OBJS_C	Makefile	/^OBJS_C    := $(patsubst %.c, $(BUILD_DIR)\/%.c.o, $(SRCS_C))$/;"	m
+QUIT	include/engine.h	/^#define QUIT /;"	d
+ROOT_DIR	include/common.h	/^#define ROOT_DIR /;"	d
+ROOT_ENTRY_SIZE	include/common.h	/^#define ROOT_ENTRY_SIZE /;"	d
+SECTOR_SIZE	include/common.h	/^#define SECTOR_SIZE /;"	d
+SRCS_ASM	Makefile	/^SRCS_ASM  :=$/;"	m
+SRCS_C	Makefile	/^SRCS_C    := main.c$/;"	m
+SUCCESS	include/common.h	/^#define SUCCESS /;"	d
+TARGET	Makefile	/^TARGET    := $(BUILD_DIR)\/main$/;"	m
+TEST_DIR	Makefile	/^TEST_DIR  := test$/;"	m
+TEST_IN	Makefile	/^TEST_IN   := in$/;"	m
+TEST_OUT	Makefile	/^TEST_OUT  := out$/;"	m
+TRUE	include/common.h	/^#define TRUE /;"	d
+VINFO_t	include/fs.h	/^} VINFO_t;$/;"	t	typeref:struct:volume_info
+WORK_DIR	Makefile	/^WORK_DIR  := $(shell pwd)$/;"	m
+__COMMON_H_	include/common.h	/^#define __COMMON_H_$/;"	d
+__ENGINE_H_	include/engine.h	/^#define __ENGINE_H_$/;"	d
+__FS_H_	include/fs.h	/^#define __FS_H_ /;"	d
+__NAMS_H_	include/nasm.h	/^#define __NAMS_H_$/;"	d
+__anon21a8efa80108	src/engine/engine.c	/^static struct {$/;"	s	file:
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:0
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:1
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:2
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:3
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:4
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:5
+arguments	compile_commands.json	/^    "arguments": [$/;"	a	object:6
+bi	src/fs.c	/^static BPB_t *bi;$/;"	v	typeref:typename:BPB_t *	file:
+boot_buffer	src/fs.c	/^static uint8_t boot_buffer[SECTOR_SIZE];$/;"	v	typeref:typename:uint8_t[]	file:
+boot_part_sec	include/fs.h	/^	uint32_t boot_part_sec;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+boot_part_size	include/fs.h	/^	uint32_t boot_part_size;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+boot_sig	include/fs.h	/^	uint8_t boot_sig;$/;"	m	struct:bpb	typeref:typename:uint8_t
+bpb	include/fs.h	/^typedef struct bpb {$/;"	s
+buffer	include/fs.h	/^	uint8_t buffer[SECTOR_SIZE];$/;"	m	struct:cur_dir_info	typeref:typename:uint8_t[]
+buffer	include/fs.h	/^	uint8_t buffer[SECTOR_SIZE];$/;"	m	struct:cur_file_info	typeref:typename:uint8_t[]
+byte_sec_h	include/fs.h	/^	uint8_t byte_sec_h; \/\/ count of bytes per sector, high bit$/;"	m	struct:bpb	typeref:typename:uint8_t
+byte_sec_l	include/fs.h	/^	uint8_t byte_sec_l; \/\/ count of bytes per sector, low bit$/;"	m	struct:bpb	typeref:typename:uint8_t
+bytes_sec	include/fs.h	/^	uint32_t bytes_sec;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+cal_file_dir_num	src/engine/ls.c	/^static void cal_file_dir_num(FINFO_t *pfi, CDIRINFO_t *pcdi, int *file_n, int *dir_n) {$/;"	f	typeref:typename:void	file:
+cdicpy	src/fs.c	/^void cdicpy(CDIRINFO_t *dest, CDIRINFO_t *src) {$/;"	f	typeref:typename:void
+check_analyse_bi	src/fs.c	/^static int check_analyse_bi() {$/;"	f	typeref:typename:int	file:
+clean	Makefile	/^clean:$/;"	t
+close_fat12	src/fs.c	/^void close_fat12() {$/;"	f	typeref:typename:void
+cmd_cat	src/engine/cat.c	/^int cmd_cat(char *args, CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:int
+cmd_exit	src/engine/exit.c	/^int cmd_exit(char *args, CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:int
+cmd_ls	src/engine/ls.c	/^int cmd_ls(char *args, CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:int
+cmd_table	src/engine/engine.c	/^} cmd_table [] = {$/;"	v	typeref:struct:__anon21a8efa80108[]
+code	include/fs.h	/^	uint8_t code[448];$/;"	m	struct:bpb	typeref:typename:uint8_t[448]
+count	Makefile	/^count:$/;"	t
+cur_clus	include/fs.h	/^	uint32_t cur_clus;$/;"	m	struct:cur_file_info	typeref:typename:uint32_t
+cur_dir_info	include/fs.h	/^typedef struct cur_dir_info {$/;"	s
+cur_entry	include/fs.h	/^	uint32_t cur_entry;$/;"	m	struct:cur_dir_info	typeref:typename:uint32_t
+cur_file_info	include/fs.h	/^typedef struct cur_file_info {$/;"	s
+cur_sec	include/fs.h	/^	uint32_t cur_sec;$/;"	m	struct:cur_dir_info	typeref:typename:uint32_t
+data_sec	include/fs.h	/^	uint32_t data_sec;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+dir_attr	include/fs.h	/^	uint8_t dir_attr;$/;"	m	struct:file_info	typeref:typename:uint8_t
+dir_name	include/fs.h	/^	char dir_name[CDI_NAME_SIZE];$/;"	m	struct:cur_dir_info	typeref:typename:char[]
+dir_name	include/fs.h	/^	uint8_t dir_name[8]; \/\/ 空位填 space$/;"	m	struct:file_info	typeref:typename:uint8_t[8]
+dir_name_ext	include/fs.h	/^	uint8_t dir_name_ext[3];$/;"	m	struct:file_info	typeref:typename:uint8_t[3]
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:0
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:1
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:2
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:3
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:4
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:5
+directory	compile_commands.json	/^    "directory": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12",$/;"	s	object:6
+drive_num	include/fs.h	/^	uint8_t drive_num;$/;"	m	struct:bpb	typeref:typename:uint8_t
+engine_shut	src/engine/engine.c	/^void engine_shut() {$/;"	f	typeref:typename:void
+engine_start	src/engine/engine.c	/^int engine_start(char *img) {$/;"	f	typeref:typename:int
+fat1_sec	include/fs.h	/^	uint32_t fat1_sec;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+fat_num	include/fs.h	/^	uint32_t fat_num;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+fat_sec_h	include/fs.h	/^	uint8_t fat_sec_h;$/;"	m	struct:bpb	typeref:typename:uint8_t
+fat_sec_l	include/fs.h	/^	uint8_t fat_sec_l; \/\/ count of sectors occupied by one FAT: 9$/;"	m	struct:bpb	typeref:typename:uint8_t
+fat_size	include/fs.h	/^	uint32_t fat_size;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/main.c",$/;"	s	object:0
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/src\/engine\/cat.c",$/;"	s	object:2
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/src\/engine\/engine.c",$/;"	s	object:3
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/src\/engine\/exit.c",$/;"	s	object:4
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/src\/engine\/ls.c",$/;"	s	object:5
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/src\/fs.c",$/;"	s	object:1
+file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/src\/nasm\/uprint.c",$/;"	s	object:6
+file_info	include/fs.h	/^typedef struct file_info {$/;"	s
+file_size	include/fs.h	/^	uint32_t file_size;$/;"	m	struct:file_info	typeref:typename:uint32_t
+file_sys_type	include/fs.h	/^	uint8_t file_sys_type[8];$/;"	m	struct:bpb	typeref:typename:uint8_t[8]
+first_clus	include/fs.h	/^	uint32_t first_clus;$/;"	m	struct:cur_file_info	typeref:typename:uint32_t
+fst_clus_h	include/fs.h	/^	uint8_t fst_clus_h;$/;"	m	struct:file_info	typeref:typename:uint8_t
+fst_clus_l	include/fs.h	/^	uint8_t fst_clus_l;$/;"	m	struct:file_info	typeref:typename:uint8_t
+gdb	Makefile	/^gdb: $(TARGET)$/;"	t
+get_cmd	src/engine/engine.c	/^static char* get_cmd(CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:char *	file:
+get_dir_name	src/fs.c	/^void get_dir_name(FINFO_t *pfi, char *real_name) {$/;"	f	typeref:typename:void
+global	src/nasm/uprint.asm	/^global xprint$/;"	l
+handler	src/engine/engine.c	/^  int (*handler) (char *, CDIRINFO_t *);$/;"	m	struct:__anon21a8efa80108	typeref:typename:int (*)(char *,CDIRINFO_t *)	file:
+hid_sec_cnt	include/fs.h	/^	uint8_t hid_sec_cnt[4]; \/\/ count of hidden sectors preceding the partition the contians this /;"	m	struct:bpb	typeref:typename:uint8_t[4]
+init_cdi	src/fs.c	/^void init_cdi(CDIRINFO_t *cdi) {$/;"	f	typeref:typename:void
+init_cfi	src/fs.c	/^void init_cfi(CFILEINFO_t *cfi) {$/;"	f	typeref:typename:void
+init_fat12	src/fs.c	/^int init_fat12(char *img) {$/;"	f	typeref:typename:int
+is_relative_dir	src/fs.c	/^int is_relative_dir(FINFO_t *pfi) {$/;"	f	typeref:typename:int
+jmp_boot	include/fs.h	/^	uint8_t jmp_boot[3]; \/\/ jmp instr to boot code$/;"	m	struct:bpb	typeref:typename:uint8_t[3]
+last_tok	src/engine/cat.c	/^static int last_tok(char *file_path) {$/;"	f	typeref:typename:int	file:
+legal_arg	src/engine/ls.c	/^static char *legal_arg[] = { "-l", "-ll" };$/;"	v	typeref:typename:char * []	file:
+main	main.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main_loop	src/engine/engine.c	/^static void main_loop(CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:void	file:
+media	include/fs.h	/^	uint8_t media;$/;"	m	struct:bpb	typeref:typename:uint8_t
+n_fats	include/fs.h	/^	uint8_t n_fats; \/\/ the count of FATs: 2$/;"	m	struct:bpb	typeref:typename:uint8_t
+n_heads_h	include/fs.h	/^	uint8_t n_heads_h; $/;"	m	struct:bpb	typeref:typename:uint8_t
+n_heads_l	include/fs.h	/^	uint8_t n_heads_l; \/\/ number of heads for interrupt 0x13: 2$/;"	m	struct:bpb	typeref:typename:uint8_t
+name	src/engine/engine.c	/^  const char *name;$/;"	m	struct:__anon21a8efa80108	typeref:typename:const char *	file:
+next_clus	include/fs.h	/^	uint32_t next_clus;$/;"	m	struct:cur_file_info	typeref:typename:uint32_t
+next_entry	src/fs.c	/^int next_entry(CDIRINFO_t *pcdi, FINFO_t *pfi) {$/;"	f	typeref:typename:int
+next_file_clus	src/fs.c	/^int next_file_clus(CFILEINFO_t *pcfi) {$/;"	f	typeref:typename:int
+oem_name	include/fs.h	/^	uint8_t oem_name[8]; \/\/ OEM name identifier$/;"	m	struct:bpb	typeref:typename:uint8_t[8]
+open_dir	src/fs.c	/^int open_dir(char *dir_name, char *full_path, CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:int
+open_root_dir	src/fs.c	/^static void open_root_dir(CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:void	file:
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/main.c.o"$/;"	s	object:0
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/src\/engine\/cat/;"	s	object:2
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/src\/engine\/eng/;"	s	object:3
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/src\/engine\/exi/;"	s	object:4
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/src\/engine\/ls./;"	s	object:5
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/src\/fs.c.o"$/;"	s	object:1
+output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab2\/fs12\/build\/src\/nasm\/uprin/;"	s	object:6
+output	src/nasm/uprint.asm	/^.output:$/;"	l
+p_img	src/fs.c	/^static FILE *p_img = NULL;$/;"	v	typeref:typename:FILE *	file:
+parse	src/engine/ls.c	/^static int parse(char *arg, char **dir, int *argu) {$/;"	f	typeref:typename:int	file:
+parse_args	src/engine/ls.c	/^static int parse_args(char *args, char **dir, int *argu) {$/;"	f	typeref:typename:int	file:
+print_content	src/engine/ls.c	/^static void print_content(CDIRINFO_t *pcdi, int arg) {$/;"	f	typeref:typename:void	file:
+print_dir	src/engine/ls.c	/^static void print_dir(CDIRINFO_t *pcdi, FINFO_t *pfi, int arg) {$/;"	f	typeref:typename:void	file:
+print_file	src/engine/cat.c	/^static void print_file(CFILEINFO_t *pcfi) {$/;"	f	typeref:typename:void	file:
+print_file	src/engine/ls.c	/^static void print_file(FINFO_t *pfi, int arg) {$/;"	f	typeref:typename:void	file:
+print_num	src/engine/ls.c	/^static void print_num(int num) {$/;"	f	typeref:typename:void	file:
+read_fat	src/fs.c	/^static uint32_t read_fat(int clus) {	$/;"	f	typeref:typename:uint32_t	file:
+read_file	src/fs.c	/^int read_file(char *file_path, char *file_name, CFILEINFO_t *pcfi, CDIRINFO_t *pcdi) {$/;"	f	typeref:typename:int
+read_sec	src/fs.c	/^static int read_sec(int sec, int count, uint8_t *buffer) {$/;"	f	typeref:typename:int	file:
+reserved	include/fs.h	/^	uint8_t reserved;$/;"	m	struct:bpb	typeref:typename:uint8_t
+reserved	include/fs.h	/^	uint8_t reserved[10];$/;"	m	struct:file_info	typeref:typename:uint8_t[10]
+root_entry_cnt	include/fs.h	/^	uint32_t root_entry_cnt;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+root_entry_cnt_h	include/fs.h	/^	uint8_t root_entry_cnt_h;$/;"	m	struct:bpb	typeref:typename:uint8_t
+root_entry_cnt_l	include/fs.h	/^	uint8_t root_entry_cnt_l;$/;"	m	struct:bpb	typeref:typename:uint8_t
+root_entry_sec	include/fs.h	/^	uint32_t root_entry_sec;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+rsvd_sec_cnt_h	include/fs.h	/^	uint8_t rsvd_sec_cnt_h;$/;"	m	struct:bpb	typeref:typename:uint8_t
+rsvd_sec_cnt_l	include/fs.h	/^	uint8_t	rsvd_sec_cnt_l;$/;"	m	struct:bpb	typeref:typename:uint8_t
+run	Makefile	/^run: $(TARGET)$/;"	t
+sec_clus	include/fs.h	/^	uint32_t sec_clus;$/;"	m	struct:volume_info	typeref:typename:uint32_t
+sec_clus	include/fs.h	/^	uint8_t sec_clus; \/\/ number of sectors per allocation unit(cluster)$/;"	m	struct:bpb	typeref:typename:uint8_t
+sec_track_h	include/fs.h	/^	uint8_t sec_track_h; $/;"	m	struct:bpb	typeref:typename:uint8_t
+sec_track_l	include/fs.h	/^	uint8_t sec_track_l; \/\/ sectors per track for interrupt 0x13? 0x12$/;"	m	struct:bpb	typeref:typename:uint8_t
+sig_55	include/fs.h	/^	uint8_t sig_55; \/\/ 0x55$/;"	m	struct:bpb	typeref:typename:uint8_t
+sig_aa	include/fs.h	/^	uint8_t sig_aa; \/\/ 0xaa$/;"	m	struct:bpb	typeref:typename:uint8_t
+test	Makefile	/^test: $(TARGET)$/;"	t
+total_sec16_h	include/fs.h	/^	uint8_t total_sec16_h;$/;"	m	struct:bpb	typeref:typename:uint8_t
+total_sec16_l	include/fs.h	/^	uint8_t total_sec16_l; \/\/ total count of sectors on the volume, 16 bit: 0xe0$/;"	m	struct:bpb	typeref:typename:uint8_t
+total_sec32	include/fs.h	/^	uint8_t total_sec32[4]; \/\/ total count of sectors on the volume, 32 bit$/;"	m	struct:bpb	typeref:typename:uint8_t[4]
+uerror	include/common.h	/^#define uerror(/;"	d
+uinfo	include/common.h	/^#define uinfo(/;"	d
+uprint	src/nasm/uprint.c	/^void uprint(char *str, int len, int no_color) {$/;"	f	typeref:typename:void
+vi	src/fs.c	/^VINFO_t vi;$/;"	v	typeref:typename:VINFO_t
+vol_id	include/fs.h	/^	uint8_t vol_id[4];$/;"	m	struct:bpb	typeref:typename:uint8_t[4]
+vol_label	include/fs.h	/^	uint8_t vol_label[11];$/;"	m	struct:bpb	typeref:typename:uint8_t[11]
+volume_info	include/fs.h	/^typedef struct volume_info {$/;"	s
+wrt_date_h	include/fs.h	/^	uint8_t wrt_date_h;$/;"	m	struct:file_info	typeref:typename:uint8_t
+wrt_date_l	include/fs.h	/^	uint8_t wrt_date_l;$/;"	m	struct:file_info	typeref:typename:uint8_t
+wrt_time_h	include/fs.h	/^	uint8_t wrt_time_h;$/;"	m	struct:file_info	typeref:typename:uint8_t
+wrt_time_l	include/fs.h	/^	uint8_t wrt_time_l;$/;"	m	struct:file_info	typeref:typename:uint8_t
+xprint	src/nasm/uprint.asm	/^xprint:$/;"	l

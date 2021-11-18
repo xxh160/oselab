@@ -1,0 +1,165 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/xiayi/Mine/code/workspace/oselab/lab1/multiplus/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+$(BUILD_DIR)/%.o	Makefile	/^$(BUILD_DIR)\/%.o: %.asm$/;"	t
+$(TARGET)	Makefile	/^$(TARGET): $(OBJS)$/;"	t
+BUILD_DIR	Makefile	/^BUILD_DIR := build$/;"	m
+INC_DIR	Makefile	/^INC_DIR 	:= include$/;"	m
+LD	Makefile	/^LD        := ld$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS   := -m elf_i386 -g -e _start$/;"	m
+LIB_DIR	Makefile	/^LIB_DIR   := src$/;"	m
+NASM	Makefile	/^NASM      := nasm$/;"	m
+NASMFLAGS	Makefile	/^NASMFLAGS := -f elf32 -g -I$(WORK_DIR)\/$(INC_DIR)$/;"	m
+OBJS	Makefile	/^OBJS      := $(patsubst %.asm, $(BUILD_DIR)\/%.o, $(SRCS))$/;"	m
+SRCS	Makefile	/^SRCS      := $(wildcard $(LIB_DIR)\/*.asm) main.asm$/;"	m
+TARGET	Makefile	/^TARGET    := $(BUILD_DIR)\/main$/;"	m
+WORK_DIR	Makefile	/^WORK_DIR  := $(shell pwd)$/;"	m
+_start	main.asm	/^_start:$/;"	l
+a_l	main.asm	/^a_l: resb LEN_SIZE$/;"	l
+a_neg	main.asm	/^a_neg: resb SYMBOL_SIZE$/;"	l
+a_p	main.asm	/^a_p: resb	PTR_SIZE $/;"	l
+ab	src/ucmp.asm	/^.ab:$/;"	l
+ab_n	main.asm	/^ab_n: resb 2 * NUM_SIZE + SPACE_SIZE + 2 * SYMBOL_SIZE $/;"	l
+abase	src/uadd.asm	/^abase: dd 0$/;"	d
+abase	src/umulti.asm	/^abase: dd 0$/;"	d
+abase	src/usub.asm	/^abase: dd 0$/;"	d
+add	src/uadd.asm	/^.add:$/;"	l
+add_addr	main.asm	/^add_addr: resb PTR_SIZE$/;"	l
+add_msg	main.asm	/^add_msg: db "$A + $B:", ENDL, ZERO$/;"	d
+addone	src/uadd.asm	/^.addone:$/;"	l
+ai	src/uadd.asm	/^ai: dd 0$/;"	d
+ai	src/umulti.asm	/^ai: dd 0$/;"	d
+ai	src/usub.asm	/^ai: dd 0$/;"	d
+alen	src/umulti.asm	/^alen: dd 0$/;"	d
+aspecial	src/umulti.asm	/^.aspecial:$/;"	l
+b_l	main.asm	/^b_l: resb LEN_SIZE$/;"	l
+b_neg	main.asm	/^b_neg: resb SYMBOL_SIZE$/;"	l
+b_p	main.asm	/^b_p: resb PTR_SIZE$/;"	l
+back	src/usubzero.asm	/^.back:$/;"	l
+bb	src/ucmp.asm	/^.bb:$/;"	l
+bbase	src/uadd.asm	/^bbase: dd 0$/;"	d
+bbase	src/umulti.asm	/^bbase: dd 0$/;"	d
+bbase	src/usub.asm	/^bbase: dd 0$/;"	d
+bi	src/uadd.asm	/^bi: dd 0$/;"	d
+bi	src/umulti.asm	/^bi: dd 0$/;"	d
+bi	src/usub.asm	/^bi: dd 0$/;"	d
+blen	src/umulti.asm	/^blen: dd 0$/;"	d
+borrow	src/usub.asm	/^borrow: dd 0$/;"	d
+bspecial	src/umulti.asm	/^.bspecial:$/;"	l
+calalen	main.asm	/^.calalen:$/;"	l
+calblen	main.asm	/^.calblen:$/;"	l
+carry	src/uadd.asm	/^carry: dd 0$/;"	d
+checkb	src/umulti.asm	/^.checkb:$/;"	l
+clean	Makefile	/^clean:$/;"	t
+continue	src/uaddzero.asm	/^.continue:$/;"	l
+div	src/umulti.asm	/^	div dl$/;"	d
+endl	main.asm	/^endl: db ENDL, ZERO$/;"	d
+endloop	src/umulti.asm	/^.endloop:$/;"	l
+extern	include/macrofunc.asm	/^extern uadd$/;"	l
+extern	include/macrofunc.asm	/^extern ucmp$/;"	l
+extern	include/macrofunc.asm	/^extern umulti$/;"	l
+extern	include/macrofunc.asm	/^extern usub$/;"	l
+extern	main.asm	/^extern uaddzero$/;"	l
+extern	main.asm	/^extern uexit $/;"	l
+extern	main.asm	/^extern unegative$/;"	l
+extern	main.asm	/^extern usplit$/;"	l
+extern	main.asm	/^extern ustdin$/;"	l
+extern	main.asm	/^extern ustdout$/;"	l
+extern	main.asm	/^extern ustrip$/;"	l
+extern	main.asm	/^extern ustrl$/;"	l
+extern	main.asm	/^extern usubzero$/;"	l
+extern	src/uexit.asm	/^extern ukernel$/;"	l
+extern	src/ustdin.asm	/^extern ukernel$/;"	l
+extern	src/ustdout.asm	/^extern ukernel$/;"	l
+extern	src/ustdout.asm	/^extern ustrl$/;"	l
+gdb	Makefile	/^gdb: $(TARGET)$/;"	t
+geta	src/uadd.asm	/^.geta:$/;"	l
+geta	src/usub.asm	/^.geta:$/;"	l
+getb	src/uadd.asm	/^.getb:$/;"	l
+getb	src/usub.asm	/^.getb:$/;"	l
+global	main.asm	/^global _start $/;"	l
+global	src/uadd.asm	/^global uadd$/;"	l
+global	src/uaddzero.asm	/^global uaddzero$/;"	l
+global	src/ucmp.asm	/^global ucmp$/;"	l
+global	src/uexit.asm	/^global uexit$/;"	l
+global	src/ukernel.asm	/^global ukernel$/;"	l
+global	src/umulti.asm	/^global umulti$/;"	l
+global	src/unegative.asm	/^global unegative$/;"	l
+global	src/usplit.asm	/^global usplit$/;"	l
+global	src/ustdin.asm	/^global ustdin$/;"	l
+global	src/ustdout.asm	/^global ustdout$/;"	l
+global	src/ustrip.asm	/^global ustrip$/;"	l
+global	src/ustrl.asm	/^global ustrl$/;"	l
+global	src/usub.asm	/^global usub$/;"	l
+global	src/usubzero.asm	/^global usubzero$/;"	l
+hasborrow	src/usub.asm	/^.hasborrow:$/;"	l
+hascarry	src/uadd.asm	/^.hascarry:$/;"	l
+incaddr	src/umulti.asm	/^.incaddr:$/;"	l
+incaddr	src/usub.asm	/^.incaddr:$/;"	l
+inloop	src/umulti.asm	/^.inloop:$/;"	l
+input_msg	main.asm	/^input_msg: db "Plz input num $A and num $B:", ENDL, ZERO$/;"	d
+last	src/uadd.asm	/^.last:$/;"	l
+last	src/umulti.asm	/^.last:$/;"	l
+last	src/usub.asm	/^.last:$/;"	l
+loop	src/uadd.asm	/^.loop:$/;"	l
+loop	src/uaddzero.asm	/^.loop:$/;"	l
+loop	src/ucmp.asm	/^.loop:$/;"	l
+loop	src/usub.asm	/^.loop:$/;"	l
+loop	src/usubzero.asm	/^.loop:$/;"	l
+mov	src/ucmp.asm	/^	mov dh, byte[eax]$/;"	d
+mov	src/ucmp.asm	/^	mov dh, byte[ecx]$/;"	d
+mov	src/umulti.asm	/^	mov dl, 1$/;"	d
+mov	src/umulti.asm	/^	mov dl, 10$/;"	d
+mul	src/umulti.asm	/^	mul dl$/;"	d
+multi_addr	main.asm	/^multi_addr: resb PTR_SIZE$/;"	l
+multi_msg	main.asm	/^multi_msg: db "$A * $B:", ENDL, ZERO$/;"	d
+next	src/usplit.asm	/^.next:$/;"	l
+next	src/ustrip.asm	/^.next:$/;"	l
+next	src/ustrl.asm	/^.next:$/;"	l
+outloop	src/umulti.asm	/^.outloop:$/;"	l
+res_add	main.asm	/^res_add: resb NUM_SIZE + SYMBOL_SIZE$/;"	l
+res_multi	main.asm	/^res_multi: resb NUM_SIZE + SYMBOL_SIZE$/;"	l
+ri	src/uadd.asm	/^ri: dd NUM_SIZE + SYMBOL_SIZE - 1$/;"	d
+ri	src/umulti.asm	/^ri: dd NUM_SIZE + SYMBOL_SIZE$/;"	d
+ri	src/usub.asm	/^ri: dd NUM_SIZE + SYMBOL_SIZE - 1$/;"	d
+run	Makefile	/^run: $(TARGET)$/;"	t
+solve	src/unegative.asm	/^.solve:$/;"	l
+space	main.asm	/^space: db SPACE, ZERO$/;"	d
+spacel	src/usplit.asm	/^.spacel:$/;"	l
+state	src/uadd.asm	/^state: db 2$/;"	d
+state	src/usub.asm	/^state: db 2$/;"	d
+sub	src/usub.asm	/^.sub:$/;"	l
+sub	src/usubzero.asm	/^.sub:$/;"	l
+subai	src/uadd.asm	/^.subai:$/;"	l
+subai	src/usub.asm	/^.subai:$/;"	l
+subbi	src/uadd.asm	/^.subbi:$/;"	l
+subbi	src/usub.asm	/^.subbi:$/;"	l
+subri	src/uadd.asm	/^.subri:$/;"	l
+subri	src/usub.asm	/^.subri:$/;"	l
+test	Makefile	/^test:$/;"	t
+uadd	src/uadd.asm	/^uadd:$/;"	l
+uaddzero	src/uaddzero.asm	/^uaddzero:$/;"	l
+ucmp	src/ucmp.asm	/^ucmp:$/;"	l
+uexit	src/uexit.asm	/^uexit:$/;"	l
+ukernel	src/ukernel.asm	/^ukernel:$/;"	l
+umulti	src/umulti.asm	/^umulti:$/;"	l
+unegative	src/unegative.asm	/^unegative:$/;"	l
+usplit	src/usplit.asm	/^usplit:$/;"	l
+ustdin	src/ustdin.asm	/^ustdin:$/;"	l
+ustdout	src/ustdout.asm	/^ustdout:$/;"	l
+ustrip	src/ustrip.asm	/^ustrip:$/;"	l
+ustrl	src/ustrl.asm	/^ustrl:$/;"	l
+usub	src/usub.asm	/^usub:$/;"	l
+usubzero	src/usubzero.asm	/^usubzero:$/;"	l
+write	src/uadd.asm	/^.write:$/;"	l
+write	src/usub.asm	/^.write:$/;"	l
+zero	main.asm	/^zero: resb 1$/;"	l
+zero	src/umulti.asm	/^.zero:$/;"	l
