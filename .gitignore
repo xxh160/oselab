@@ -1,2 +1,4 @@
 others
 **/*.zip
+**/build/**
+**/.clangd/**
