@@ -57,8 +57,9 @@ static void cal_file_dir_num(FINFO_t *pfi, CDIRINFO_t *pcdi, int *file_n, int *d
 	*file_n = 0;
 	*dir_n = 0;
 	while (next_entry(pcdi, pfi) == SUCCESS) {
-		if (pfi->dir_attr == FILE_ATTR) ++(*file_n);
+		if (pfi->dir_attr == FILE_ATTR || pfi->dir_attr == FILE_ATTR_WIN) ++(*file_n);
 		else if (pfi->dir_attr == DIR_ATTR) {
+			// . .. 不计
 			if (is_relative_dir(pfi)) continue;
 			++(*dir_n);
 		}
@@ -130,12 +131,12 @@ static void print_content(CDIRINFO_t *pcdi, int arg) {
 	init_cdi(&cdi_back);
 	assert(pcdi->cur_entry == 0);
 	while (next_entry(pcdi, &fi) == SUCCESS) {
-		if (fi.dir_attr == FILE_ATTR) print_file(&fi, arg);
+		if (fi.dir_attr == FILE_ATTR || fi.dir_attr == FILE_ATTR_WIN) print_file(&fi, arg);
 		else if (fi.dir_attr == DIR_ATTR) print_dir(pcdi, &fi, arg);
 	}
 	assert(pcdi->cur_entry == 0);
 	while (next_entry(pcdi, &fi) == SUCCESS) {
-		if (fi.dir_attr == FILE_ATTR) continue;
+		if (fi.dir_attr == FILE_ATTR || fi.dir_attr == FILE_ATTR_WIN) continue;
 		if (is_relative_dir(&fi)) continue;
 		// 打印换行符, 开始递归
 		uprint("\n", 1, 1);

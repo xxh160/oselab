@@ -2,6 +2,7 @@
 #include <fs.h>
 #include <common.h>
 #include <readline/readline.h>
+#include <readline/history.h>
 #include <stdlib.h>
 
 // char* readline (const char *prompt);
@@ -18,6 +19,11 @@ static char* get_cmd(CDIRINFO_t *pcdi) {
 	strcat(pwd, " ");
 	strcat(pwd, ASNI_NONE);
   line_read = readline(pwd);
+
+	if (line_read && *line_read) {
+    add_history(line_read);
+  }
+
   return line_read;
 }
 

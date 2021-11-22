@@ -35,7 +35,7 @@ CFLAGS    := -m32 -g -c -I$(INC_DIR) -O2 -MMD -Wall -Werror
 
 TARGET    := $(BUILD_DIR)/main
 
-.PHONY: gdb run rerun clean test count
+.PHONY: gdb run rerun clean test count submit
 
 $(BUILD_DIR)/%.asm.o: %.asm
 	@mkdir -p $(dir $@)
@@ -62,4 +62,9 @@ test: $(TARGET)
 
 count:
 	@find . -name "*.[ch]" | xargs cat | grep -v "^$$" | wc -l
+
+submit:
+	@git add .
+	@git commit -m "submit"
+	@git push origin main
 

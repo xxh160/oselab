@@ -115,6 +115,7 @@ END_NAME	include/common.h	/^#define END_NAME /;"	d
 FAILURE	include/common.h	/^#define FAILURE /;"	d
 FALSE	include/common.h	/^#define FALSE /;"	d
 FILE_ATTR	include/common.h	/^#define FILE_ATTR /;"	d
+FILE_ATTR_WIN	include/common.h	/^#define FILE_ATTR_WIN /;"	d
 FINAL_CLUS	include/common.h	/^#define FINAL_CLUS /;"	d
 FINFO_t	include/fs.h	/^} FINFO_t;$/;"	t	typeref:struct:file_info
 IMG_DIR	Makefile	/^IMG_DIR   := fat12$/;"	m
@@ -132,6 +133,7 @@ N_ARG	src/engine/ls.c	/^#define N_ARG /;"	d	file:
 N_CMD	src/engine/engine.c	/^#define N_CMD /;"	d	file:
 OBJS_ASM	Makefile	/^OBJS_ASM  := $(patsubst %.asm, $(BUILD_DIR)\/%.asm.o, $(SRCS_ASM))$/;"	m
 OBJS_C	Makefile	/^OBJS_C    := $(patsubst %.c, $(BUILD_DIR)\/%.c.o, $(SRCS_C))$/;"	m
+OseLab2	README.md	/^# OseLab2$/;"	c
 QUIT	include/engine.h	/^#define QUIT /;"	d
 ROOT_DIR	include/common.h	/^#define ROOT_DIR /;"	d
 ROOT_ENTRY_SIZE	include/common.h	/^#define ROOT_ENTRY_SIZE /;"	d
@@ -278,6 +280,7 @@ sec_track_h	include/fs.h	/^	uint8_t sec_track_h; $/;"	m	struct:bpb	typeref:typen
 sec_track_l	include/fs.h	/^	uint8_t sec_track_l; \/\/ sectors per track for interrupt 0x13? 0x12$/;"	m	struct:bpb	typeref:typename:uint8_t
 sig_55	include/fs.h	/^	uint8_t sig_55; \/\/ 0x55$/;"	m	struct:bpb	typeref:typename:uint8_t
 sig_aa	include/fs.h	/^	uint8_t sig_aa; \/\/ 0xaa$/;"	m	struct:bpb	typeref:typename:uint8_t
+table of content	README.md	/^## table of content$/;"	s	chapter:OseLab2
 test	Makefile	/^test: $(TARGET)$/;"	t
 total_sec16_h	include/fs.h	/^	uint8_t total_sec16_h;$/;"	m	struct:bpb	typeref:typename:uint8_t
 total_sec16_l	include/fs.h	/^	uint8_t total_sec16_l; \/\/ total count of sectors on the volume, 16 bit: 0xe0$/;"	m	struct:bpb	typeref:typename:uint8_t
@@ -285,7 +288,8 @@ total_sec32	include/fs.h	/^	uint8_t total_sec32[4]; \/\/ total count of sectors 
 uerror	include/common.h	/^#define uerror(/;"	d
 uinfo	include/common.h	/^#define uinfo(/;"	d
 uprint	src/nasm/uprint.c	/^void uprint(char *str, int len, int no_color) {$/;"	f	typeref:typename:void
-vi	src/fs.c	/^VINFO_t vi;$/;"	v	typeref:typename:VINFO_t
+usage	README.md	/^## usage$/;"	s	chapter:OseLab2
+vi	src/fs.c	/^static VINFO_t vi;$/;"	v	typeref:typename:VINFO_t	file:
 vol_id	include/fs.h	/^	uint8_t vol_id[4];$/;"	m	struct:bpb	typeref:typename:uint8_t[4]
 vol_label	include/fs.h	/^	uint8_t vol_label[11];$/;"	m	struct:bpb	typeref:typename:uint8_t[11]
 volume_info	include/fs.h	/^typedef struct volume_info {$/;"	s
@@ -294,3 +298,5 @@ wrt_date_l	include/fs.h	/^	uint8_t wrt_date_l;$/;"	m	struct:file_info	typeref:ty
 wrt_time_h	include/fs.h	/^	uint8_t wrt_time_h;$/;"	m	struct:file_info	typeref:typename:uint8_t
 wrt_time_l	include/fs.h	/^	uint8_t wrt_time_l;$/;"	m	struct:file_info	typeref:typename:uint8_t
 xprint	src/nasm/uprint.asm	/^xprint:$/;"	l
+运行截图	README.md	/^## 运行截图$/;"	s	chapter:OseLab2
+项目结构	README.md	/^## 项目结构$/;"	s	chapter:OseLab2

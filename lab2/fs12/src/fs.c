@@ -167,7 +167,7 @@ int read_file(char *file_path, char *file_name, CFILEINFO_t *pcfi, CDIRINFO_t *p
 		char real_name[12] = { 0 };
 		get_dir_name(&fi, real_name);
 		if (strcmp(file_name, real_name) != 0) continue;
-		if (fi.dir_attr != FILE_ATTR) {
+		if (fi.dir_attr != FILE_ATTR && fi.dir_attr != FILE_ATTR_WIN) {
 			uerror("'%s' is not a file", file_name);
 			cdicpy(pcdi, &cdi_back);
 			return FAILURE;
@@ -232,7 +232,7 @@ int open_dir(char *dir_name, char *full_path, CDIRINFO_t *pcdi) {
 		if (strcmp(cur_path, real_name) != 0) continue;
 		// find
 		// if it is file
-		if (fi.dir_attr == FILE_ATTR) {
+		if (fi.dir_attr == FILE_ATTR || fi.dir_attr == FILE_ATTR_WIN) {
 			uerror("can not open file '%s' as directory", full);
 			return FAILURE;
 		}

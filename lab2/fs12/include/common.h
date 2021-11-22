@@ -11,6 +11,7 @@
 
 #define FILE_ATTR 0x20
 #define DIR_ATTR 0x10
+#define FILE_ATTR_WIN 0x00
 
 #define FINAL_CLUS 0xFFF
 
