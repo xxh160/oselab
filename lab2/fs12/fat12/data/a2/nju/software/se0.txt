@@ -1,2 +1,2 @@
-11001100
+00000010
 document is always right.
