@@ -34,23 +34,24 @@ typedef struct s_proc {
 	u16 ldt_sel;               /* gdt selector giving ldt base and limit */
 	DESCRIPTOR ldts[LDT_SIZE]; /* local descriptors for code and data */
 
-        int ticks;                 /* remained ticks */
-        int priority;
+	int ticks;                 /* remained ticks */
+  int priority;
 
 	u32 pid;                   /* process id passed in from MM */
 	char p_name[16];           /* name of the process */
 }PROCESS;
 
 typedef struct s_task {
-	task_f	initial_eip;
+	task_f initial_eip;
 	int	stacksize;
 	char	name[32];
-}TASK;
+} TASK;
 
 
 /* Number of tasks & procs */
 #define NR_TASKS	1
-#define NR_PROCS	3
+// hwd: only one process
+#define NR_PROCS	1
 
 /* stacks of tasks */
 #define STACK_SIZE_TTY		0x8000
@@ -59,7 +60,7 @@ typedef struct s_task {
 #define STACK_SIZE_TESTC	0x8000
 
 #define STACK_SIZE_TOTAL	(STACK_SIZE_TTY + \
-				STACK_SIZE_TESTA + \
-				STACK_SIZE_TESTB + \
-				STACK_SIZE_TESTC)
+				STACK_SIZE_TESTA )
+				// STACK_SIZE_TESTB + \
+				// STACK_SIZE_TESTC)
 

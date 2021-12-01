@@ -41,7 +41,7 @@ MOUNT_DIR     = ./floppy
 #   @echo "why not \`make image' huh? :)"
 
 run: commit image
-	bochs -f bochsrc 
+	bochs -f bochsrc -q
 
 commit: realclean
 	git add .
