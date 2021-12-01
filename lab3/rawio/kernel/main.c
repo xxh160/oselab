@@ -84,6 +84,8 @@ PUBLIC int kernel_main() {
 
 	// hwd: start loop
 	while(1) {
+		refresh();
+		milli_delay(2000);
 	}
 }
 
