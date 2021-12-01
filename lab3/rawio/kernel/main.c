@@ -27,7 +27,7 @@ PUBLIC int kernel_main() {
   u8 rpl;
   int eflags;
 
-	for (i = 0; i < NR_TASKS+NR_PROCS; i++) {
+	for (i = 0; i < NR_TASKS + NR_PROCS; i++) {
     if (i < NR_TASKS) {     /* 任务 */
 			p_task    = task_table + i;
       privilege = PRIVILEGE_TASK;
@@ -84,8 +84,6 @@ PUBLIC int kernel_main() {
 
 	// hwd: start loop
 	while(1) {
-		refresh();
-		milli_delay(2000);
 	}
 }
 

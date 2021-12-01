@@ -25,7 +25,7 @@ typedef struct s_stackframe {	/* proc_ptr points here				↑ Low			*/
 	u32	eflags;		/*  ┣ these are pushed by CPU during interrupt	│			*/
 	u32	esp;		/*  ┃						│			*/
 	u32	ss;		/*  ┛						┷High			*/
-}STACK_FRAME;
+} STACK_FRAME;
 
 
 typedef struct s_proc {
@@ -39,12 +39,12 @@ typedef struct s_proc {
 
 	u32 pid;                   /* process id passed in from MM */
 	char p_name[16];           /* name of the process */
-}PROCESS;
+} PROCESS;
 
 typedef struct s_task {
 	task_f initial_eip;
 	int	stacksize;
-	char	name[32];
+	char name[32];
 } TASK;
 
 
