@@ -615,6 +615,7 @@ enable_0	lib/kliba.asm	/^enable_0:$/;"	l
 enable_8	lib/kliba.asm	/^enable_8:$/;"	l
 enable_int	lib/kliba.asm	/^enable_int:$/;"	l
 enable_irq	lib/kliba.asm	/^enable_irq:$/;"	l
+enter_search	kernel/tty.c	/^PRIVATE void enter_search(int cursor) {$/;"	f	typeref:typename:PRIVATE void
 es	include/proc.h	/^	u32	es;		\/* ┃						│			*\/$/;"	m	struct:s_stackframe	typeref:typename:u32
 es	include/protect.h	/^	u32	es;$/;"	m	struct:s_tss	typeref:typename:u32
 esi	include/proc.h	/^	u32	esi;		\/* ┣ pushed by save()				│			*\/$/;"	m	struct:s_stackframe	typeref:typename:u32
@@ -627,6 +628,7 @@ esp2	include/protect.h	/^	u32	esp2;$/;"	m	struct:s_tss	typeref:typename:u32
 everything	Makefile	/^everything: $(ORANGESBOOT) $(ORANGESKERNEL)$/;"	t
 exception	kernel/kernel.asm	/^exception:$/;"	l
 exception_handler	kernel/protect.c	/^PUBLIC void exception_handler(int vec_no, int err_code, int eip, int cs, int eflags)$/;"	f	typeref:typename:PUBLIC void
+exit_search	kernel/tty.c	/^PRIVATE void exit_search() {$/;"	f	typeref:typename:PRIVATE void
 extern	kernel/kernel.asm	/^extern	clock_handler$/;"	l
 extern	kernel/kernel.asm	/^extern	cstart$/;"	l
 extern	kernel/kernel.asm	/^extern	delay$/;"	l
@@ -755,6 +757,7 @@ iobase	include/protect.h	/^	u16	iobase;	\/* I\/O位图基址大于或等于TSS�
 irq_handler	include/type.h	/^typedef	void	(*irq_handler)	(int irq);$/;"	t	typeref:typename:void (*)(int irq)
 irq_table	kernel/global.c	/^PUBLIC irq_handler irq_table[NR_IRQ];$/;"	v	typeref:typename:PUBLIC irq_handler[]
 is_current_console	kernel/console.c	/^PUBLIC int is_current_console(CONSOLE* p_con) {$/;"	f	typeref:typename:PUBLIC int
+is_search	kernel/tty.c	/^PUBLIC int is_search() {$/;"	f	typeref:typename:PUBLIC int
 itoa	lib/klib.c	/^PUBLIC char * itoa(char * str, int num)\/* 数字前面的 0 不被显示出来, 比如 0000B800/;"	f	typeref:typename:PUBLIC char *
 jmp	boot/loader.asm	/^jmp	LABEL_START		; Start$/;"	l
 k_reenter	include/global.h	/^EXTERN	u32	k_reenter;$/;"	v	typeref:typename:EXTERN u32
@@ -788,6 +791,7 @@ limit_high_attr2	include/protect.h	/^	u8	limit_high_attr2;	\/* G(1) D(1) 0(1) AV
 limit_low	include/protect.h	/^	u16	limit_low;		\/* Limit *\/$/;"	m	struct:s_descriptor	typeref:typename:u16
 loop	boot/loader.asm	/^.loop:					;{$/;"	l
 main	test/test.c	/^int main() {$/;"	f	typeref:typename:int
+match	kernel/tty.c	/^PRIVATE void match(int origin_addr, int cur_cursor) {$/;"	f	typeref:typename:PRIVATE void
 memcpy	lib/string.asm	/^memcpy:$/;"	l
 memset	lib/string.asm	/^memset:$/;"	l
 milli_delay	kernel/clock.c	/^PUBLIC void milli_delay(int milli_sec) {$/;"	f	typeref:typename:PUBLIC void
@@ -885,7 +889,7 @@ schedule	kernel/proc.c	/^PUBLIC void schedule() {$/;"	f	typeref:typename:PUBLIC 
 scroll_lock	kernel/keyboard.c	/^PRIVATE	int	scroll_lock;	\/* Scroll Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 scroll_lock	kernel/keyboard.c	/^PRIVATE int	scroll_lock;	\/* Scroll Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 scroll_screen	kernel/console.c	/^PUBLIC void scroll_screen(CONSOLE* p_con, int direction) {$/;"	f	typeref:typename:PUBLIC void
-search	kernel/tty.c	/^PUBLIC int search;$/;"	v	typeref:typename:PUBLIC int
+search	kernel/tty.c	/^PRIVATE int search;$/;"	v	typeref:typename:PRIVATE int
 seg2phys	kernel/protect.c	/^PUBLIC u32 seg2phys(u16 seg)$/;"	f	typeref:typename:PUBLIC u32
 segment_not_present	kernel/kernel.asm	/^segment_not_present:$/;"	l
 select_console	kernel/console.c	/^PUBLIC void select_console(int nr_console) {$/;"	f	typeref:typename:PUBLIC void
@@ -904,6 +908,7 @@ ss1	include/protect.h	/^	u32	ss1;$/;"	m	struct:s_tss	typeref:typename:u32
 ss2	include/protect.h	/^	u32	ss2;$/;"	m	struct:s_tss	typeref:typename:u32
 stack_exception	kernel/kernel.asm	/^stack_exception:$/;"	l
 stacksize	include/proc.h	/^	int	stacksize;$/;"	m	struct:s_task	typeref:typename:int
+start_cursor	kernel/tty.c	/^PRIVATE int start_cursor; $/;"	v	typeref:typename:PRIVATE int
 strcpy	lib/string.asm	/^strcpy:$/;"	l
 sys_call	kernel/kernel.asm	/^sys_call:$/;"	l
 sys_call_table	kernel/global.c	/^PUBLIC system_call sys_call_table[NR_SYS_CALL] = {sys_get_ticks};$/;"	v	typeref:typename:PUBLIC system_call[]
