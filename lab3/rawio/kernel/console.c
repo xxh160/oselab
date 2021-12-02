@@ -72,6 +72,8 @@ PUBLIC void init_screen(TTY* p_tty) {
 PUBLIC void task_refresh() {
 	CONSOLE *p_console = &console_table[nr_current_console];
 	while (1) {
+		// hwd: search mode 不清屏
+		if (search == 1) continue;
 		milli_delay(10000);
 		while (p_console->cursor != p_console->original_addr) {
 			out_char(p_console, '\b');		
@@ -110,7 +112,7 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 			}
 			break;
 		case '\t':	
-			
+		case 'a':
 		default:
 			if (p_con->cursor <
 					p_con->original_addr + p_con->v_mem_limit - 1) {

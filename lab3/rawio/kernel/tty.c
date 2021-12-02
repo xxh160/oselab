@@ -30,6 +30,8 @@ PUBLIC void task_tty() {
 	TTY* p_tty;
 
 	init_keyboard();
+	// hwd: search mode closed
+	search = 0;
 
 	for (p_tty = TTY_FIRST; p_tty < TTY_END; ++p_tty) {
 		init_tty(p_tty);
@@ -74,6 +76,10 @@ PUBLIC void in_process(TTY* p_tty, u32 key) {
 				break;
 			case BACKSPACE:
 				put_key(p_tty, '\b');
+				break;
+			case ESC:
+				search = !search;
+				disp_str("search");
 				break;
 			case UP:
 				if ((key & FLAG_SHIFT_L) || (key & FLAG_SHIFT_R)) {
