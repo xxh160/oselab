@@ -105,7 +105,6 @@ PUBLIC void keyboard_read(TTY* p_tty) {
 		code_with_E0 = 0;
 
 		scan_code = get_byte_from_kbuf();
-		disp_int(scan_code);
 
 		/* 下面开始解析扫描码 */
 		// hwd: preprocess
@@ -205,7 +204,7 @@ PUBLIC void keyboard_read(TTY* p_tty) {
 					break;
 				case NUM_LOCK:
 					if (make) {
-						num_lock    = !num_lock;
+						num_lock = !num_lock;
 						set_leds();
 					}
 					break;

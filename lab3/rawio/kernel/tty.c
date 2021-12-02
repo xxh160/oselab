@@ -82,6 +82,12 @@ PUBLIC void in_process(TTY* p_tty, u32 key) {
 			case ESC:
 				// hwd: search mode
 				search = !search;
+				disp_str("search");
+				break;
+			case TAB:
+				// hwd: tab
+				disp_str("tab");
+				put_key(p_tty, '\t');
 				break;
 			case UP:
 				if ((key & FLAG_SHIFT_L) || (key & FLAG_SHIFT_R)) {
