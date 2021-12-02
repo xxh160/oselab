@@ -106,6 +106,13 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 			}
 			break;
 		case '\b':
+			if (*(p_vmem - 1) == TAB_CHAR_COLOR) {
+				for (int i = 0; i < 4; ++i) {
+					--p_con->cursor;
+					*(p_vmem - 2 - i * 2) = ' ';
+					*(p_vmem - 1 - i * 2) = DEFAULT_CHAR_COLOR;
+				}
+			}
 			if (p_con->cursor > p_con->original_addr) {
 				p_con->cursor--;
 				*(p_vmem-2) = ' ';

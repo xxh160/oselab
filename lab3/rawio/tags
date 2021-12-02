@@ -438,6 +438,7 @@ StackSpace	boot/loader.asm	/^StackSpace:	times	1000h	db	0$/;"	l
 StackSpace	kernel/kernel.asm	/^StackSpace		resb	2 * 1024$/;"	l
 StackTop	kernel/kernel.asm	/^StackTop:		; 栈顶$/;"	l
 TAB	include/keyboard.h	/^#define TAB	/;"	d
+TAB_CHAR_COLOR	include/console.h	/^#define TAB_CHAR_COLOR /;"	d
 TASK	include/proc.h	/^} TASK;$/;"	t	typeref:struct:s_task
 TIMER0	include/const.h	/^#define TIMER0 /;"	d
 TIMER_FREQ	include/const.h	/^#define TIMER_FREQ /;"	d
