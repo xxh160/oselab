@@ -94,7 +94,7 @@ void Task_refresh() {
 	CONSOLE *p_console = &console_table[nr_current_console];
 	while (1) {
 		while (p_console->cursor != p_console->original_addr) {
-			out_char(p_console, '\b');		
+			out_char(p_console, 'a');		
 		}
 		milli_delay(5000);
 	}
