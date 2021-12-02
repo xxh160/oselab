@@ -72,7 +72,7 @@ PUBLIC void init_screen(TTY* p_tty) {
 PUBLIC void task_refresh() {
 	CONSOLE *p_console = &console_table[nr_current_console];
 	while (1) {
-		milli_delay(2000);
+		milli_delay(10000);
 		while (p_console->cursor != p_console->original_addr) {
 			out_char(p_console, '\b');		
 		}
