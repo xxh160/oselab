@@ -37,7 +37,7 @@ PUBLIC int kernel_main() {
 			p_task    = user_proc_table + (i - NR_TASKS);
       privilege = PRIVILEGE_USER;
       rpl       = RPL_USER;
-      eflags    = 0x202; /* IF=1, bit 2 is always 1 */
+      eflags    = 0x1202; /* IF=1, bit 2 is always 1 */
     }
 
 		strcpy(p_proc->p_name, p_task->name);	// name of the process
