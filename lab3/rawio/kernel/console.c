@@ -112,13 +112,15 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 				*(p_vmem-1) = DEFAULT_CHAR_COLOR;
 			}
 			break;
-		case '\t':	
-			if (p_con->cursor <
+		case '\t':
+			for (int i = 0; i < 4; ++i) {
+				if (p_con->cursor <
 					p_con->original_addr + p_con->v_mem_limit - 1) {
-				*p_vmem++ = 't';
-				*p_vmem++ = RED_CHAR_COLOR;
-				p_con->cursor++;
-			}	
+					*p_vmem++ = ' ';
+					*p_vmem++ = TAB_CHAR_COLOR;
+					p_con->cursor++;
+				}
+			}
 			break;
 		default:
 			if (p_con->cursor <

@@ -26,5 +26,7 @@ typedef struct s_console {
 #define DEFAULT_CHAR_COLOR 0x07	/* 0000 0111 黑底白字 */
 // hwd: 黑底红字
 #define RED_CHAR_COLOR 0x04
+// hwd: tab 颜色
+#define TAB_CHAR_COLOR 0x05
 
 #endif /* _ORANGES_CONSOLE_H_ */
