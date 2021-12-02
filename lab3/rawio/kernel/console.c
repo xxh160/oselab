@@ -113,7 +113,6 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 			}
 			break;
 		case '\t':	
-		case 'a':
 		default:
 			if (p_con->cursor <
 					p_con->original_addr + p_con->v_mem_limit - 1) {
