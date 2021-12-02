@@ -89,6 +89,7 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 			if (match_len == len) break;
 		}
 		if (match_len == len) {
+			disp_str("match");
 			int cur_end = cur_start + match_len;
 			while (cur_start < cur_end) {
 				*(start_addr + cur_start + 1) = RED_CHAR_COLOR;
