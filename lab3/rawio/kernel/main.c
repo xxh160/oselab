@@ -68,9 +68,8 @@ PUBLIC int kernel_main() {
 		selector_ldt += 1 << 3;
 	}
 
-	proc_table[0].ticks = proc_table[0].priority = 15;
-	proc_table[1].ticks = proc_table[1].priority =  5;
-	proc_table[2].ticks = proc_table[2].priority =  3;
+	proc_table[0].ticks = proc_table[0].priority = 20;
+	proc_table[1].ticks = proc_table[1].priority = 20;
 
 	k_reenter = 0;
 	ticks = 0;

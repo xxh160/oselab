@@ -75,7 +75,6 @@ PUBLIC void task_refresh() {
 		while (p_console->cursor != p_console->original_addr) {
 			out_char(p_console, '\b');		
 		}
-		milli_delay(5000);
 	}
 }
 
