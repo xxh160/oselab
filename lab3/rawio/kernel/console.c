@@ -21,6 +21,8 @@
 #include "keyboard.h"
 #include "proto.h"
 
+EXTERN int search;
+
 PRIVATE void set_cursor(unsigned int position);
 PRIVATE void set_video_start_addr(u32 addr);
 PRIVATE void flush(CONSOLE* p_con);
