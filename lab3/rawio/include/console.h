@@ -29,4 +29,6 @@ typedef struct s_console {
 // hwd: tab 颜色
 #define TAB_CHAR_COLOR 0x05
 
+int is_search();
+
 #endif /* _ORANGES_CONSOLE_H_ */

@@ -74,7 +74,7 @@ PUBLIC void task_refresh() {
 	CONSOLE *p_console = &console_table[nr_current_console];
 	while (1) {
 		// hwd: search mode 不清屏
-		if (search == 1) continue;
+		if (is_search()) continue;
 		milli_delay(10000);
 		while (p_console->cursor != p_console->original_addr) {
 			out_char(p_console, '\b');		
@@ -135,7 +135,7 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 			if (p_con->cursor <
 					p_con->original_addr + p_con->v_mem_limit - 1) {
 				*p_vmem++ = ch;
-				if (search == 1) *p_vmem++ = RED_CHAR_COLOR;
+				if (is_search()) *p_vmem++ = RED_CHAR_COLOR;
 				else *p_vmem++ = DEFAULT_CHAR_COLOR;
 				p_con->cursor++;
 			}

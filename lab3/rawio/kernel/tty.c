@@ -18,7 +18,7 @@
 #define TTY_FIRST	(tty_table)
 #define TTY_END		(tty_table + NR_CONSOLES)
 
-PUBLIC int search;
+PRIVATE int search;
 
 PRIVATE void init_tty(TTY* p_tty);
 PRIVATE void tty_do_read(TTY* p_tty);
@@ -60,11 +60,64 @@ PRIVATE void init_tty(TTY* p_tty) {
 	init_screen(p_tty);
 }
 
+PUBLIC int is_search() {
+	return search != 0;
+}
+
+PRIVATE int start_cursor; 
+
+// hwd: enter search mode
+// hwd: 记录当前 cursor
+PRIVATE void enter_search(int cursor) {
+	search = 1;
+	start_cursor = cursor;
+}
+
+PRIVATE void match(int origin_addr, int cur_cursor) {
+	u8 *start_addr = (u8 *)(V_MEM_BASE + origin_addr * 2);
+	u8 *end_addr = (u8 *)(V_MEM_BASE + start_cursor * 2);
+	u8 *ta_start = (u8 *)(V_MEM_BASE + start_cursor * 2);		
+	u8 *ta_end = (u8 *)(V_MEM_BASE + cur_cursor * 2);
+	int len = ta_end - ta_start;
+	int i = 0;
+	while (i < end_addr - start_addr) {
+		int cur_start = i;
+		int match_len = 0;
+		while (*(start_addr + i) == *(ta_start + match_len)) {
+			i += 2;	
+			match_len += 2;
+			if (match_len == len) break;
+		}
+		if (match_len == len) {
+			int cur_end = cur_start + match_len;
+			while (cur_start < cur_end) {
+				*(start_addr + cur_start + 1) = RED_CHAR_COLOR;
+				cur_start += 2;
+			}	
+		}
+	}
+}
+
+// hwd: exit search mode
+// hwd: 删除所有进入 search mode 后的字符, 恢复文本颜色
+PRIVATE void exit_search() {
+	search = 0;
+}
+
+
 /*======================================================================*
 				in_process
  *======================================================================*/
 PUBLIC void in_process(TTY* p_tty, u32 key) {
 	char output[2] = {'\0', '\0'};
+	
+	// hwd: 屏蔽除了 Esc 之外的字符
+	if (search == 2) {
+		int raw_code = key & MASK_RAW;
+		if (raw_code != ESC) return;
+		exit_search();
+		return;
+	}
 
 	// hwd: 若 key & FLAG_EXT 为假, 则为可打印字符
 	if (!(key & FLAG_EXT)) {
@@ -74,6 +127,11 @@ PUBLIC void in_process(TTY* p_tty, u32 key) {
 		int raw_code = key & MASK_RAW;
     switch(raw_code) {
 			case ENTER:
+				if (search == 1) {
+					match(p_tty->p_console->original_addr, p_tty->p_console->cursor);
+					search = 2;
+					break;
+				}
 				put_key(p_tty, '\n');
 				break;
 			case BACKSPACE:
@@ -81,7 +139,9 @@ PUBLIC void in_process(TTY* p_tty, u32 key) {
 				break;
 			case ESC:
 				// hwd: search mode
-				search = !search;
+				// hwd: search == 0 or 1, not 2
+				if (search == 0) enter_search(p_tty->p_console->cursor);
+				else exit_search();
 				break;
 			case TAB:
 				// hwd: tab
