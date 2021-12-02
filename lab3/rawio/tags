@@ -155,7 +155,7 @@ CASCADE_IRQ	include/const.h	/^#define	CASCADE_IRQ	/;"	d
 CC	Makefile	/^CC		      = gcc$/;"	m
 CFLAGS	Makefile	/^CFLAGS		  = -I include\/ -c -fno-builtin -m32 -fno-stack-protector$/;"	m
 CLOCK_IRQ	include/const.h	/^#define	CLOCK_IRQ	/;"	d
-CONSOLE	include/console.h	/^}CONSOLE;$/;"	t	typeref:struct:s_console
+CONSOLE	include/console.h	/^} CONSOLE;$/;"	t	typeref:struct:s_console
 CRTC_ADDR_REG	include/const.h	/^#define	CRTC_ADDR_REG	/;"	d
 CRTC_DATA_REG	include/const.h	/^#define	CRTC_DATA_REG	/;"	d
 CTRL_L	include/keyboard.h	/^#define CTRL_L	/;"	d
@@ -184,7 +184,7 @@ DA_DRWA	include/protect.h	/^#define	DA_DRWA	/;"	d
 DA_LDT	include/protect.h	/^#define	DA_LDT	/;"	d
 DA_LIMIT_4K	include/protect.h	/^#define	DA_LIMIT_4K	/;"	d
 DA_TaskGate	include/protect.h	/^#define	DA_TaskGate	/;"	d
-DEFAULT_CHAR_COLOR	include/console.h	/^#define DEFAULT_CHAR_COLOR	/;"	d
+DEFAULT_CHAR_COLOR	include/console.h	/^#define DEFAULT_CHAR_COLOR /;"	d
 DELETE	include/keyboard.h	/^#define DELETE	/;"	d
 DESCRIPTOR	include/protect.h	/^}DESCRIPTOR;$/;"	t	typeref:struct:s_descriptor
 DOWN	include/keyboard.h	/^#define DOWN	/;"	d
@@ -276,7 +276,7 @@ InitKernel	boot/loader.asm	/^InitKernel:	; 遍历每一个 Program Header，根�
 KB_ACK	include/const.h	/^#define KB_ACK	/;"	d
 KB_CMD	include/const.h	/^#define KB_CMD	/;"	d
 KB_DATA	include/const.h	/^#define KB_DATA	/;"	d
-KB_INPUT	include/keyboard.h	/^}KB_INPUT;$/;"	t	typeref:struct:s_kb
+KB_INPUT	include/keyboard.h	/^} KB_INPUT;$/;"	t	typeref:struct:s_kb
 KB_IN_BYTES	include/keyboard.h	/^#define	KB_IN_BYTES	/;"	d
 KEYBOARD_IRQ	include/const.h	/^#define	KEYBOARD_IRQ	/;"	d
 KernelFileName	boot/loader.asm	/^KernelFileName		db	"KERNEL  BIN", 0	; KERNEL.BIN 之文件名$/;"	d
@@ -383,7 +383,7 @@ PRIVATE	include/const.h	/^#define	PRIVATE	/;"	d
 PRIVILEGE_KRNL	include/const.h	/^#define	PRIVILEGE_KRNL	/;"	d
 PRIVILEGE_TASK	include/const.h	/^#define	PRIVILEGE_TASK	/;"	d
 PRIVILEGE_USER	include/const.h	/^#define	PRIVILEGE_USER	/;"	d
-PROCESS	include/proc.h	/^}PROCESS;$/;"	t	typeref:struct:s_proc
+PROCESS	include/proc.h	/^} PROCESS;$/;"	t	typeref:struct:s_proc
 PUBLIC	include/const.h	/^#define	PUBLIC	/;"	d
 RATE_GENERATOR	include/const.h	/^#define RATE_GENERATOR /;"	d
 RED	include/const.h	/^#define RED /;"	d
@@ -403,10 +403,10 @@ SA_TIG	include/protect.h	/^#define	SA_TIG	/;"	d
 SA_TIL	include/protect.h	/^#define	SA_TIL	/;"	d
 SA_TI_MASK	include/protect.h	/^#define	SA_TI_MASK	/;"	d
 SCREEN_SIZE	include/console.h	/^#define SCREEN_SIZE	/;"	d
-SCREEN_WIDTH	include/console.h	/^#define SCREEN_WIDTH	/;"	d
+SCREEN_WIDTH	include/console.h	/^#define SCREEN_WIDTH /;"	d
 SCROLL_LOCK	include/keyboard.h	/^#define SCROLL_LOCK	/;"	d
-SCR_DN	include/console.h	/^#define SCR_DN	/;"	d
-SCR_UP	include/console.h	/^#define SCR_UP	/;"	d
+SCR_DN	include/console.h	/^#define SCR_DN /;"	d
+SCR_UP	include/console.h	/^#define SCR_UP /;"	d
 SECONDARY_IRQ	include/const.h	/^#define	SECONDARY_IRQ	/;"	d
 SELECTOR_DUMMY	include/protect.h	/^#define	SELECTOR_DUMMY	/;"	d
 SELECTOR_FLAT_C	include/protect.h	/^#define	SELECTOR_FLAT_C	/;"	d
@@ -420,7 +420,7 @@ SELECTOR_VIDEO	include/protect.h	/^#define	SELECTOR_VIDEO	/;"	d
 SHIFT_L	include/keyboard.h	/^#define SHIFT_L	/;"	d
 SHIFT_R	include/keyboard.h	/^#define SHIFT_R	/;"	d
 SLEEP	include/keyboard.h	/^#define SLEEP	/;"	d
-STACK_FRAME	include/proc.h	/^}STACK_FRAME;$/;"	t	typeref:struct:s_stackframe
+STACK_FRAME	include/proc.h	/^} STACK_FRAME;$/;"	t	typeref:struct:s_stackframe
 STACK_SIZE_TESTA	include/proc.h	/^#define STACK_SIZE_TESTA	/;"	d
 STACK_SIZE_TESTB	include/proc.h	/^#define STACK_SIZE_TESTB	/;"	d
 STACK_SIZE_TESTC	include/proc.h	/^#define STACK_SIZE_TESTC	/;"	d
@@ -436,18 +436,18 @@ StackSpace	boot/loader.asm	/^StackSpace:	times	1000h	db	0$/;"	l
 StackSpace	kernel/kernel.asm	/^StackSpace		resb	2 * 1024$/;"	l
 StackTop	kernel/kernel.asm	/^StackTop:		; 栈顶$/;"	l
 TAB	include/keyboard.h	/^#define TAB	/;"	d
-TASK	include/proc.h	/^}TASK;$/;"	t	typeref:struct:s_task
+TASK	include/proc.h	/^} TASK;$/;"	t	typeref:struct:s_task
 TIMER0	include/const.h	/^#define TIMER0 /;"	d
 TIMER_FREQ	include/const.h	/^#define TIMER_FREQ /;"	d
 TIMER_MODE	include/const.h	/^#define TIMER_MODE /;"	d
 TSS	include/protect.h	/^}TSS;$/;"	t	typeref:struct:s_tss
-TTY	include/tty.h	/^}TTY;$/;"	t	typeref:struct:s_tty
+TTY	include/tty.h	/^} TTY;$/;"	t	typeref:struct:s_tty
 TTY_END	kernel/tty.c	/^#define TTY_END	/;"	d	file:
 TTY_FIRST	kernel/tty.c	/^#define TTY_FIRST	/;"	d	file:
-TTY_IN_BYTES	include/tty.h	/^#define TTY_IN_BYTES	/;"	d
-TestA	kernel/main.c	/^void TestA()$/;"	f	typeref:typename:void
-TestB	kernel/main.c	/^void TestB()$/;"	f	typeref:typename:void
-TestC	kernel/main.c	/^void TestC()$/;"	f	typeref:typename:void
+TTY_IN_BYTES	include/tty.h	/^#define TTY_IN_BYTES /;"	d
+Task_refresh	kernel/main.c	/^void Task_refresh() {$/;"	f	typeref:typename:void
+TestB	kernel/main.c	/^void TestB() {$/;"	f	typeref:typename:void
+TestC	kernel/main.c	/^void TestC() {$/;"	f	typeref:typename:void
 TopOfStack	boot/loader.asm	/^TopOfStack	equ	BaseOfLoaderPhyAddr + $	; 栈顶$/;"	d
 UP	include/keyboard.h	/^#define UP	/;"	d
 V_MEM_BASE	include/const.h	/^#define	V_MEM_BASE	/;"	d
@@ -518,13 +518,13 @@ boot/boot.bin	Makefile	/^boot\/boot.bin: boot\/boot.asm boot\/include\/load.inc 
 boot/loader.bin	Makefile	/^boot\/loader.bin: boot\/loader.asm boot\/include\/load.inc boot\/include\/fat12hdr.inc boot\/inc/;"	t
 bounds_check	kernel/kernel.asm	/^bounds_check:$/;"	l
 breakpoint_exception	kernel/kernel.asm	/^breakpoint_exception:$/;"	l
-buf	include/keyboard.h	/^	char	buf[KB_IN_BYTES];	\/* 缓冲区 *\/$/;"	m	struct:s_kb	typeref:typename:char[]
+buf	include/keyboard.h	/^	char buf[KB_IN_BYTES];	\/* 缓冲区 *\/$/;"	m	struct:s_kb	typeref:typename:char[]
 buildimg	Makefile	/^buildimg:$/;"	t
 cStandard	.vscode/c_cpp_properties.json	/^            "cStandard": "c17",$/;"	s	object:configurations.0
 caps_lock	kernel/keyboard.c	/^PRIVATE	int	caps_lock;	\/* Caps Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 caps_lock	kernel/keyboard.c	/^PRIVATE int	caps_lock;	\/* Caps Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 clean	Makefile	/^clean:$/;"	t
-clock_handler	kernel/clock.c	/^PUBLIC void clock_handler(int irq)$/;"	f	typeref:typename:PUBLIC void
+clock_handler	kernel/clock.c	/^PUBLIC void clock_handler(int irq) {$/;"	f	typeref:typename:PUBLIC void
 clock_int_msg	kernel/kernel.asm	/^clock_int_msg		db	"^", 0$/;"	d
 cmp	boot/boot.asm	/^	cmp	dx, 0					; ┓循环次数控制,$/;"	d
 cmp	boot/boot.asm	/^	cmp	dx, 0$/;"	d
@@ -532,10 +532,11 @@ cmp	boot/loader.asm	/^	cmp	dx, 0					; ┓$/;"	d
 cmp	boot/loader.asm	/^	cmp	dx, 0$/;"	d
 code_with_E0	kernel/keyboard.c	/^PRIVATE	int	code_with_E0;$/;"	v	typeref:typename:PRIVATE int
 column	kernel/keyboard.c	/^PRIVATE	int	column;$/;"	v	typeref:typename:PRIVATE int
+commit	Makefile	/^commit: realclean$/;"	t
 compileCommands	.vscode/c_cpp_properties.json	/^            "compileCommands": "${workspaceFolder}\/compile_commands.json"$/;"	s	object:configurations.0
 compilerPath	.vscode/c_cpp_properties.json	/^            "compilerPath": "\/usr\/bin\/clang",$/;"	s	object:configurations.0
 configurations	.vscode/c_cpp_properties.json	/^    "configurations": [$/;"	a
-console_table	kernel/global.c	/^PUBLIC	CONSOLE		console_table[NR_CONSOLES];$/;"	v	typeref:typename:PUBLIC CONSOLE[]
+console_table	kernel/global.c	/^PUBLIC CONSOLE console_table[NR_CONSOLES];$/;"	v	typeref:typename:PUBLIC CONSOLE[]
 copr_error	kernel/kernel.asm	/^copr_error:$/;"	l
 copr_not_available	kernel/kernel.asm	/^copr_not_available:$/;"	l
 copr_seg_overrun	kernel/kernel.asm	/^copr_seg_overrun:$/;"	l
@@ -545,12 +546,13 @@ cr3	include/protect.h	/^	u32	cr3;$/;"	m	struct:s_tss	typeref:typename:u32
 cs	include/proc.h	/^	u32	cs;		\/*  ┃						│			*\/$/;"	m	struct:s_stackframe	typeref:typename:u32
 cs	include/protect.h	/^	u32	cs;$/;"	m	struct:s_tss	typeref:typename:u32
 csinit	kernel/kernel.asm	/^csinit:		; “这个跳转指令强制使用刚刚初始化的结构”——<<OS:D&I 2nd>> P90.$/;"	l
-cstart	kernel/start.c	/^PUBLIC void cstart()$/;"	f	typeref:typename:PUBLIC void
+cstart	kernel/start.c	/^PUBLIC void cstart() {$/;"	f	typeref:typename:PUBLIC void
 ctrl_l	kernel/keyboard.c	/^PRIVATE	int	ctrl_l;		\/* l ctrl state	 *\/$/;"	v	typeref:typename:PRIVATE int
 ctrl_r	kernel/keyboard.c	/^PRIVATE	int	ctrl_r;		\/* l ctrl state	 *\/$/;"	v	typeref:typename:PRIVATE int
-current_start_addr	include/console.h	/^	unsigned int	current_start_addr;	\/* 当前显示到了什么位置	  *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
-cursor	include/console.h	/^	unsigned int	cursor;			\/* 当前光标位置 *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
+current_start_addr	include/console.h	/^	unsigned int current_start_addr;	\/* 当前显示到了什么位置	  *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
+cursor	include/console.h	/^	unsigned int cursor;			\/* 当前光标位置 *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
 dcount	include/protect.h	/^	u8	dcount;		\/* 该字段只在调用门描述符中有效。$/;"	m	struct:s_gate	typeref:typename:u8
+dd	boot/loader.asm	/^dd	BaseOfLoaderPhyAddr + LABEL_GDT		; 基地址$/;"	l
 dec	boot/boot.asm	/^	dec	dx					; ┛就跳到下一个 Sector$/;"	d
 dec	boot/boot.asm	/^dec	cx$/;"	l
 dec	boot/loader.asm	/^	dec	dx					; ┛$/;"	d
@@ -575,7 +577,7 @@ disable_irq	lib/kliba.asm	/^disable_irq:$/;"	l
 disasm	Makefile	/^disasm:$/;"	t
 disp_color_str	lib/kliba.asm	/^disp_color_str:$/;"	l
 disp_int	lib/klib.c	/^PUBLIC void disp_int(int input)$/;"	f	typeref:typename:PUBLIC void
-disp_pos	include/global.h	/^EXTERN	int		disp_pos;$/;"	v	typeref:typename:EXTERN int
+disp_pos	include/global.h	/^EXTERN	int disp_pos;$/;"	v	typeref:typename:EXTERN int
 disp_str	lib/kliba.asm	/^disp_str:$/;"	l
 divide_error	kernel/kernel.asm	/^divide_error:$/;"	l
 double_fault	kernel/kernel.asm	/^double_fault:$/;"	l
@@ -650,13 +652,13 @@ file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/
 file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/kernel\/tty.c",$/;"	s	object:4
 file	compile_commands.json	/^    "file": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/lib\/klib.c",$/;"	s	object:10
 flags	include/protect.h	/^	u32	flags;$/;"	m	struct:s_tss	typeref:typename:u32
-flush	kernel/console.c	/^PRIVATE void flush(CONSOLE* p_con)$/;"	f	typeref:typename:PRIVATE void
+flush	kernel/console.c	/^PRIVATE void flush(CONSOLE* p_con) {$/;"	f	typeref:typename:PRIVATE void
 fs	include/proc.h	/^	u32	fs;		\/* ┃						│			*\/$/;"	m	struct:s_stackframe	typeref:typename:u32
 fs	include/protect.h	/^	u32	fs;$/;"	m	struct:s_tss	typeref:typename:u32
-gdt	include/global.h	/^EXTERN	DESCRIPTOR	gdt[GDT_SIZE];$/;"	v	typeref:typename:EXTERN DESCRIPTOR[]
-gdt_ptr	include/global.h	/^EXTERN	u8		gdt_ptr[6];	\/\/ 0~15:Limit  16~47:Base$/;"	v	typeref:typename:EXTERN u8[6]
+gdt	include/global.h	/^EXTERN	DESCRIPTOR gdt[GDT_SIZE];$/;"	v	typeref:typename:EXTERN DESCRIPTOR[]
+gdt_ptr	include/global.h	/^EXTERN	u8 gdt_ptr[6];	\/\/ 0~15:Limit  16~47:Base$/;"	v	typeref:typename:EXTERN u8[6]
 general_protection	kernel/kernel.asm	/^general_protection:$/;"	l
-get_byte_from_kbuf	kernel/keyboard.c	/^PRIVATE u8 get_byte_from_kbuf()       \/* 从键盘缓冲区中读取下一个字节 *\/$/;"	f	typeref:typename:PRIVATE u8
+get_byte_from_kbuf	kernel/keyboard.c	/^PRIVATE u8 get_byte_from_kbuf() {$/;"	f	typeref:typename:PRIVATE u8
 get_ticks	kernel/syscall.asm	/^get_ticks:$/;"	l
 global	kernel/kernel.asm	/^global	bounds_check$/;"	l
 global	kernel/kernel.asm	/^global	breakpoint_exception$/;"	l
@@ -723,37 +725,38 @@ hwint12	kernel/kernel.asm	/^hwint12:		; Interrupt routine for irq 12$/;"	l
 hwint13	kernel/kernel.asm	/^hwint13:		; Interrupt routine for irq 13 (FPU exception)$/;"	l
 hwint14	kernel/kernel.asm	/^hwint14:		; Interrupt routine for irq 14 (AT winchester)$/;"	l
 hwint15	kernel/kernel.asm	/^hwint15:		; Interrupt routine for irq 15$/;"	l
-idt	include/global.h	/^EXTERN	GATE		idt[IDT_SIZE];$/;"	v	typeref:typename:EXTERN GATE[]
-idt_ptr	include/global.h	/^EXTERN	u8		idt_ptr[6];	\/\/ 0~15:Limit  16~47:Base$/;"	v	typeref:typename:EXTERN u8[6]
+idt	include/global.h	/^EXTERN	GATE idt[IDT_SIZE];$/;"	v	typeref:typename:EXTERN GATE[]
+idt_ptr	include/global.h	/^EXTERN	u8 idt_ptr[6];	\/\/ 0~15:Limit  16~47:Base$/;"	v	typeref:typename:EXTERN u8[6]
 image	Makefile	/^image: realclean everything clean buildimg$/;"	t
 in_buf	include/tty.h	/^	u32	in_buf[TTY_IN_BYTES];	\/* TTY 输入缓冲区 *\/$/;"	m	struct:s_tty	typeref:typename:u32[]
 in_byte	lib/kliba.asm	/^in_byte:$/;"	l
-in_process	kernel/tty.c	/^PUBLIC void in_process(TTY* p_tty, u32 key)$/;"	f	typeref:typename:PUBLIC void
+in_process	kernel/tty.c	/^PUBLIC void in_process(TTY* p_tty, u32 key) {$/;"	f	typeref:typename:PUBLIC void
 inbuf_count	include/tty.h	/^	int	inbuf_count;		\/* 缓冲区中已经填充了多少 *\/$/;"	m	struct:s_tty	typeref:typename:int
 inc	boot/boot.asm	/^	inc	di$/;"	d
 inc	boot/loader.asm	/^	inc	di$/;"	d
 includePath	.vscode/c_cpp_properties.json	/^            "includePath": [$/;"	a	object:configurations.0
 init_8259A	kernel/i8259.c	/^PUBLIC void init_8259A()$/;"	f	typeref:typename:PUBLIC void
-init_clock	kernel/clock.c	/^PUBLIC void init_clock()$/;"	f	typeref:typename:PUBLIC void
+init_clock	kernel/clock.c	/^PUBLIC void init_clock() {$/;"	f	typeref:typename:PUBLIC void
 init_descriptor	kernel/protect.c	/^PRIVATE void init_descriptor(DESCRIPTOR * p_desc, u32 base, u32 limit, u16 attribute)$/;"	f	typeref:typename:PRIVATE void
 init_idt_desc	kernel/protect.c	/^PUBLIC void init_idt_desc(unsigned char vector, u8 desc_type, int_handler handler, unsigned char/;"	f	typeref:typename:PUBLIC void
-init_keyboard	kernel/keyboard.c	/^PUBLIC void init_keyboard()$/;"	f	typeref:typename:PUBLIC void
-init_prot	kernel/protect.c	/^PUBLIC void init_prot()$/;"	f	typeref:typename:PUBLIC void
-init_screen	kernel/console.c	/^PUBLIC void init_screen(TTY* p_tty)$/;"	f	typeref:typename:PUBLIC void
-init_tty	kernel/tty.c	/^PRIVATE void init_tty(TTY* p_tty)$/;"	f	typeref:typename:PRIVATE void
-initial_eip	include/proc.h	/^	task_f	initial_eip;$/;"	m	struct:s_task	typeref:typename:task_f
+init_keyboard	kernel/keyboard.c	/^PUBLIC void init_keyboard() {$/;"	f	typeref:typename:PUBLIC void
+init_prot	kernel/protect.c	/^PUBLIC void init_prot() {$/;"	f	typeref:typename:PUBLIC void
+init_screen	kernel/console.c	/^PUBLIC void init_screen(TTY* p_tty) {$/;"	f	typeref:typename:PUBLIC void
+init_tty	kernel/tty.c	/^PRIVATE void init_tty(TTY* p_tty) {$/;"	f	typeref:typename:PRIVATE void
+initial_eip	include/proc.h	/^	task_f initial_eip;$/;"	m	struct:s_task	typeref:typename:task_f
 int_handler	include/type.h	/^typedef	void	(*int_handler)	();$/;"	t	typeref:typename:void (*)()
 intelliSenseMode	.vscode/c_cpp_properties.json	/^            "intelliSenseMode": "linux-clang-x64",$/;"	s	object:configurations.0
 inval_opcode	kernel/kernel.asm	/^inval_opcode:$/;"	l
 inval_tss	kernel/kernel.asm	/^inval_tss:$/;"	l
 iobase	include/protect.h	/^	u16	iobase;	\/* I\/O位图基址大于或等于TSS段界限，就表示没有I\/O许可位图 */;"	m	struct:s_tss	typeref:typename:u16
 irq_handler	include/type.h	/^typedef	void	(*irq_handler)	(int irq);$/;"	t	typeref:typename:void (*)(int irq)
-irq_table	kernel/global.c	/^PUBLIC	irq_handler	irq_table[NR_IRQ];$/;"	v	typeref:typename:PUBLIC irq_handler[]
-is_current_console	kernel/console.c	/^PUBLIC int is_current_console(CONSOLE* p_con)$/;"	f	typeref:typename:PUBLIC int
+irq_table	kernel/global.c	/^PUBLIC irq_handler irq_table[NR_IRQ];$/;"	v	typeref:typename:PUBLIC irq_handler[]
+is_current_console	kernel/console.c	/^PUBLIC int is_current_console(CONSOLE* p_con) {$/;"	f	typeref:typename:PUBLIC int
 itoa	lib/klib.c	/^PUBLIC char * itoa(char * str, int num)\/* 数字前面的 0 不被显示出来, 比如 0000B800/;"	f	typeref:typename:PUBLIC char *
-k_reenter	include/global.h	/^EXTERN	u32		k_reenter;$/;"	v	typeref:typename:EXTERN u32
+jmp	boot/loader.asm	/^jmp	LABEL_START		; Start$/;"	l
+k_reenter	include/global.h	/^EXTERN	u32	k_reenter;$/;"	v	typeref:typename:EXTERN u32
 kb_ack	kernel/keyboard.c	/^PRIVATE void kb_ack()$/;"	f	typeref:typename:PRIVATE void
-kb_in	kernel/keyboard.c	/^PRIVATE KB_INPUT	kb_in;$/;"	v	typeref:typename:PRIVATE KB_INPUT
+kb_in	kernel/keyboard.c	/^PRIVATE KB_INPUT kb_in;$/;"	v	typeref:typename:PRIVATE KB_INPUT
 kb_wait	kernel/keyboard.c	/^PRIVATE void kb_wait()	\/* 等待 8042 的输入缓冲区空 *\/$/;"	f	typeref:typename:PRIVATE void
 kernel/clock.o	Makefile	/^kernel\/clock.o: kernel\/clock.c$/;"	t
 kernel/console.o	Makefile	/^kernel\/console.o: kernel\/console.c$/;"	t
@@ -768,9 +771,9 @@ kernel/start.o	Makefile	/^kernel\/start.o: kernel\/start.c include\/type.h inclu
 kernel/syscall.o	Makefile	/^kernel\/syscall.o: kernel\/syscall.asm include\/sconst.inc$/;"	t
 kernel/tty.o	Makefile	/^kernel\/tty.o: kernel\/tty.c$/;"	t
 kernel_esp	include/proc.h	/^	u32	kernel_esp;	\/* <- 'popad' will ignore it			│			*\/$/;"	m	struct:s_stackframe	typeref:typename:u32
-kernel_main	kernel/main.c	/^PUBLIC int kernel_main()$/;"	f	typeref:typename:PUBLIC int
-keyboard_handler	kernel/keyboard.c	/^PUBLIC void keyboard_handler(int irq)$/;"	f	typeref:typename:PUBLIC void
-keyboard_read	kernel/keyboard.c	/^PUBLIC void keyboard_read(TTY* p_tty)$/;"	f	typeref:typename:PUBLIC void
+kernel_main	kernel/main.c	/^PUBLIC int kernel_main() {$/;"	f	typeref:typename:PUBLIC int
+keyboard_handler	kernel/keyboard.c	/^PUBLIC void keyboard_handler(int irq) {$/;"	f	typeref:typename:PUBLIC void
+keyboard_read	kernel/keyboard.c	/^PUBLIC void keyboard_read(TTY* p_tty) {$/;"	f	typeref:typename:PUBLIC void
 keymap	include/keymap.h	/^u32 keymap[NR_SCAN_CODES * MAP_COLS] = {$/;"	v	typeref:typename:u32[]
 ldt	include/protect.h	/^	u32	ldt;$/;"	m	struct:s_tss	typeref:typename:u32
 ldt_sel	include/proc.h	/^	u16 ldt_sel;               \/* gdt selector giving ldt base and limit *\/$/;"	m	struct:s_proc	typeref:typename:u16
@@ -781,9 +784,10 @@ lib/string.o	Makefile	/^lib\/string.o: lib\/string.asm$/;"	t
 limit_high_attr2	include/protect.h	/^	u8	limit_high_attr2;	\/* G(1) D(1) 0(1) AVL(1) LimitHigh(4) *\/$/;"	m	struct:s_descriptor	typeref:typename:u8
 limit_low	include/protect.h	/^	u16	limit_low;		\/* Limit *\/$/;"	m	struct:s_descriptor	typeref:typename:u16
 loop	boot/loader.asm	/^.loop:					;{$/;"	l
+main	test/test.c	/^int main() {$/;"	f	typeref:typename:int
 memcpy	lib/string.asm	/^memcpy:$/;"	l
 memset	lib/string.asm	/^memset:$/;"	l
-milli_delay	kernel/clock.c	/^PUBLIC void milli_delay(int milli_sec)$/;"	f	typeref:typename:PUBLIC void
+milli_delay	kernel/clock.c	/^PUBLIC void milli_delay(int milli_sec) {$/;"	f	typeref:typename:PUBLIC void
 mov	boot/boot.asm	/^	mov	dh, 0			; "Booting  "$/;"	d
 mov	boot/boot.asm	/^	mov	dh, 1			; "Ready."$/;"	d
 mov	boot/boot.asm	/^	mov	dh, 2			; "No LOADER."$/;"	d
@@ -813,21 +817,20 @@ mov	kernel/kernel.asm	/^        mov     dx, ss$/;"	d
 mul	boot/boot.asm	/^	mul	dh$/;"	d
 mul	boot/loader.asm	/^	mul	dh$/;"	d
 name	.vscode/c_cpp_properties.json	/^            "name": "Linux",$/;"	s	object:configurations.0
-name	include/proc.h	/^	char	name[32];$/;"	m	struct:s_task	typeref:typename:char[32]
+name	include/proc.h	/^	char name[32];$/;"	m	struct:s_task	typeref:typename:char[32]
 nmi	kernel/kernel.asm	/^nmi:$/;"	l
 no_remainder	boot/loader.asm	/^.no_remainder:$/;"	l
-nop	Makefile	/^nop:$/;"	t
-nr_current_console	include/global.h	/^EXTERN	int		nr_current_console;$/;"	v	typeref:typename:EXTERN int
+nr_current_console	include/global.h	/^EXTERN	int	nr_current_console;$/;"	v	typeref:typename:EXTERN int
 num_lock	kernel/keyboard.c	/^PRIVATE	int	num_lock;	\/* Num Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 num_lock	kernel/keyboard.c	/^PRIVATE int	num_lock;	\/* Num Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 offset_high	include/protect.h	/^	u16	offset_high;	\/* Offset High *\/$/;"	m	struct:s_gate	typeref:typename:u16
 offset_low	include/protect.h	/^	u16	offset_low;	\/* Offset Low *\/$/;"	m	struct:s_gate	typeref:typename:u16
 org	boot/loader.asm	/^org  0100h$/;"	l
-original_addr	include/console.h	/^	unsigned int	original_addr;		\/* 当前控制台对应显存位置 *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
+original_addr	include/console.h	/^	unsigned int original_addr;		\/* 当前控制台对应显存位置 *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
 out	boot/loader.asm	/^	out	dx, al$/;"	d
 out	lib/kliba.asm	/^	out	dx, al$/;"	d
 out_byte	lib/kliba.asm	/^out_byte:$/;"	l
-out_char	kernel/console.c	/^PUBLIC void out_char(CONSOLE* p_con, char ch)$/;"	f	typeref:typename:PUBLIC void
+out_char	kernel/console.c	/^PUBLIC void out_char(CONSOLE* p_con, char ch) {$/;"	f	typeref:typename:PUBLIC void
 output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/kernel\/clock.o"$/;"	s	object:2
 output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/kernel\/console.o"$/;"	s	object:5
 output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/kernel\/global.o"$/;"	s	object:7
@@ -840,31 +843,33 @@ output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspa
 output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/kernel\/tty.o"$/;"	s	object:4
 output	compile_commands.json	/^    "output": "\/home\/xiayi\/Mine\/code\/workspace\/oselab\/lab3\/rawio\/lib\/klib.o"$/;"	s	object:10
 overflow	kernel/kernel.asm	/^overflow:$/;"	l
-p_console	include/tty.h	/^	struct s_console *	p_console;$/;"	m	struct:s_tty	typeref:struct:s_console *
+p_console	include/tty.h	/^	struct s_console *p_console;$/;"	m	struct:s_tty	typeref:struct:s_console *
 p_head	include/keyboard.h	/^	char*	p_head;			\/* 指向缓冲区中下一个空闲位置 *\/$/;"	m	struct:s_kb	typeref:typename:char *
-p_inbuf_head	include/tty.h	/^	u32*	p_inbuf_head;		\/* 指向缓冲区中下一个空闲位置 *\/$/;"	m	struct:s_tty	typeref:typename:u32 *
-p_inbuf_tail	include/tty.h	/^	u32*	p_inbuf_tail;		\/* 指向键盘任务应处理的键值 *\/$/;"	m	struct:s_tty	typeref:typename:u32 *
+p_inbuf_head	include/tty.h	/^	u32 *p_inbuf_head;		\/* 指向缓冲区中下一个空闲位置 *\/$/;"	m	struct:s_tty	typeref:typename:u32 *
+p_inbuf_tail	include/tty.h	/^	u32 *p_inbuf_tail;		\/* 指向键盘任务应处理的键值 *\/$/;"	m	struct:s_tty	typeref:typename:u32 *
 p_name	include/proc.h	/^	char p_name[16];           \/* name of the process *\/$/;"	m	struct:s_proc	typeref:typename:char[16]
-p_proc_ready	include/global.h	/^EXTERN	PROCESS*	p_proc_ready;$/;"	v	typeref:typename:EXTERN PROCESS *
+p_proc_ready	include/global.h	/^EXTERN	PROCESS* p_proc_ready;$/;"	v	typeref:typename:EXTERN PROCESS *
 p_tail	include/keyboard.h	/^	char*	p_tail;			\/* 指向键盘任务应处理的字节 *\/$/;"	m	struct:s_kb	typeref:typename:char *
 page_fault	kernel/kernel.asm	/^page_fault:$/;"	l
 pid	include/proc.h	/^	u32 pid;                   \/* process id passed in from MM *\/$/;"	m	struct:s_proc	typeref:typename:u32
 pop	boot/boot.asm	/^	pop	dx$/;"	d
 pop	boot/loader.asm	/^	pop	dx$/;"	d
 pop	kernel/kernel.asm	/^	pop	ds$/;"	d
-priority	include/proc.h	/^        int priority;$/;"	m	struct:s_proc	typeref:typename:int
-proc_table	kernel/global.c	/^PUBLIC	PROCESS	proc_table[NR_TASKS + NR_PROCS];$/;"	v	typeref:typename:PUBLIC PROCESS[]
+priority	include/proc.h	/^  int priority;$/;"	m	struct:s_proc	typeref:typename:int
+proc_table	kernel/global.c	/^PUBLIC PROCESS proc_table[NR_TASKS + NR_PROCS];$/;"	v	typeref:typename:PUBLIC PROCESS[]
 push	boot/boot.asm	/^	push	dx$/;"	d
 push	boot/loader.asm	/^	push	dx$/;"	d
 push	kernel/kernel.asm	/^        push    ds      ;  |$/;"	d
 put_irq_handler	kernel/i8259.c	/^PUBLIC void put_irq_handler(int irq, irq_handler handler)$/;"	f	typeref:typename:PUBLIC void
-put_key	kernel/tty.c	/^PRIVATE void put_key(TTY* p_tty, u32 key)$/;"	f	typeref:typename:PRIVATE void
+put_key	kernel/tty.c	/^PRIVATE void put_key(TTY* p_tty, u32 key) {$/;"	f	typeref:typename:PRIVATE void
 realclean	Makefile	/^realclean:$/;"	t
+refresh	kernel/console.c	/^PUBLIC void refresh() {$/;"	f	typeref:typename:PUBLIC void
 regs	include/proc.h	/^	STACK_FRAME regs;          \/* process registers saved in stack frame *\/$/;"	m	struct:s_proc	typeref:typename:STACK_FRAME
 restart	kernel/kernel.asm	/^restart:$/;"	l
 restart_reenter	kernel/kernel.asm	/^restart_reenter:$/;"	l
 retaddr	include/proc.h	/^	u32	retaddr;	\/* return address for assembly code save()	│			*\/$/;"	m	struct:s_stackframe	typeref:typename:u32
-s_console	include/console.h	/^typedef struct s_console$/;"	s
+run	Makefile	/^run: commit image$/;"	t
+s_console	include/console.h	/^typedef struct s_console {$/;"	s
 s_descriptor	include/protect.h	/^typedef struct s_descriptor		\/* 共 8 个字节 *\/$/;"	s
 s_gate	include/protect.h	/^typedef struct s_gate$/;"	s
 s_kb	include/keyboard.h	/^typedef struct s_kb {$/;"	s
@@ -872,19 +877,19 @@ s_proc	include/proc.h	/^typedef struct s_proc {$/;"	s
 s_stackframe	include/proc.h	/^typedef struct s_stackframe {	\/* proc_ptr points here				↑ Low			*\/$/;"	s
 s_task	include/proc.h	/^typedef struct s_task {$/;"	s
 s_tss	include/protect.h	/^typedef struct s_tss {$/;"	s
-s_tty	include/tty.h	/^typedef struct s_tty$/;"	s
+s_tty	include/tty.h	/^typedef struct s_tty {$/;"	s
 save	kernel/kernel.asm	/^save:$/;"	l
-schedule	kernel/proc.c	/^PUBLIC void schedule()$/;"	f	typeref:typename:PUBLIC void
+schedule	kernel/proc.c	/^PUBLIC void schedule() {$/;"	f	typeref:typename:PUBLIC void
 scroll_lock	kernel/keyboard.c	/^PRIVATE	int	scroll_lock;	\/* Scroll Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 scroll_lock	kernel/keyboard.c	/^PRIVATE int	scroll_lock;	\/* Scroll Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
-scroll_screen	kernel/console.c	/^PUBLIC void scroll_screen(CONSOLE* p_con, int direction)$/;"	f	typeref:typename:PUBLIC void
+scroll_screen	kernel/console.c	/^PUBLIC void scroll_screen(CONSOLE* p_con, int direction) {$/;"	f	typeref:typename:PUBLIC void
 seg2phys	kernel/protect.c	/^PUBLIC u32 seg2phys(u16 seg)$/;"	f	typeref:typename:PUBLIC u32
 segment_not_present	kernel/kernel.asm	/^segment_not_present:$/;"	l
-select_console	kernel/console.c	/^PUBLIC void select_console(int nr_console)	\/* 0 ~ (NR_CONSOLES - 1) *\/$/;"	f	typeref:typename:PUBLIC void
+select_console	kernel/console.c	/^PUBLIC void select_console(int nr_console) {$/;"	f	typeref:typename:PUBLIC void
 selector	include/protect.h	/^	u16	selector;	\/* Selector *\/$/;"	m	struct:s_gate	typeref:typename:u16
-set_cursor	kernel/console.c	/^PRIVATE void set_cursor(unsigned int position)$/;"	f	typeref:typename:PRIVATE void
+set_cursor	kernel/console.c	/^PRIVATE void set_cursor(unsigned int position) {$/;"	f	typeref:typename:PRIVATE void
 set_leds	kernel/keyboard.c	/^PRIVATE void set_leds()$/;"	f	typeref:typename:PRIVATE void
-set_video_start_addr	kernel/console.c	/^PRIVATE void set_video_start_addr(u32 addr)$/;"	f	typeref:typename:PRIVATE void
+set_video_start_addr	kernel/console.c	/^PRIVATE void set_video_start_addr(u32 addr) {$/;"	f	typeref:typename:PRIVATE void
 shift_l	kernel/keyboard.c	/^PRIVATE	int	shift_l;	\/* l shift state *\/$/;"	v	typeref:typename:PRIVATE int
 shift_r	kernel/keyboard.c	/^PRIVATE	int	shift_r;	\/* r shift state *\/$/;"	v	typeref:typename:PRIVATE int
 single_step_exception	kernel/kernel.asm	/^single_step_exception:$/;"	l
@@ -898,29 +903,29 @@ stack_exception	kernel/kernel.asm	/^stack_exception:$/;"	l
 stacksize	include/proc.h	/^	int	stacksize;$/;"	m	struct:s_task	typeref:typename:int
 strcpy	lib/string.asm	/^strcpy:$/;"	l
 sys_call	kernel/kernel.asm	/^sys_call:$/;"	l
-sys_call_table	kernel/global.c	/^PUBLIC	system_call	sys_call_table[NR_SYS_CALL] = {sys_get_ticks};$/;"	v	typeref:typename:PUBLIC system_call[]
-sys_get_ticks	kernel/proc.c	/^PUBLIC int sys_get_ticks()$/;"	f	typeref:typename:PUBLIC int
+sys_call_table	kernel/global.c	/^PUBLIC system_call sys_call_table[NR_SYS_CALL] = {sys_get_ticks};$/;"	v	typeref:typename:PUBLIC system_call[]
+sys_get_ticks	kernel/proc.c	/^PUBLIC int sys_get_ticks() {$/;"	f	typeref:typename:PUBLIC int
 system_call	include/type.h	/^typedef void*	system_call;$/;"	t	typeref:typename:void *
 szMemChkTitle	boot/loader.asm	/^szMemChkTitle		equ	BaseOfLoaderPhyAddr + _szMemChkTitle$/;"	d
 szRAMSize	boot/loader.asm	/^szRAMSize		equ	BaseOfLoaderPhyAddr + _szRAMSize$/;"	d
 szReturn	boot/loader.asm	/^szReturn		equ	BaseOfLoaderPhyAddr + _szReturn$/;"	d
 task_f	include/type.h	/^typedef	void	(*task_f)	();$/;"	t	typeref:typename:void (*)()
-task_stack	kernel/global.c	/^PUBLIC	char		task_stack[STACK_SIZE_TOTAL];$/;"	v	typeref:typename:PUBLIC char[]
-task_table	kernel/global.c	/^PUBLIC	TASK	task_table[NR_TASKS] = {$/;"	v	typeref:typename:PUBLIC TASK[]
-task_tty	kernel/tty.c	/^PUBLIC void task_tty()$/;"	f	typeref:typename:PUBLIC void
-ticks	include/global.h	/^EXTERN	int		ticks;$/;"	v	typeref:typename:EXTERN int
-ticks	include/proc.h	/^        int ticks;                 \/* remained ticks *\/$/;"	m	struct:s_proc	typeref:typename:int
+task_stack	kernel/global.c	/^PUBLIC char	task_stack[STACK_SIZE_TOTAL];$/;"	v	typeref:typename:PUBLIC char[]
+task_table	kernel/global.c	/^PUBLIC TASK task_table[NR_TASKS] = {$/;"	v	typeref:typename:PUBLIC TASK[]
+task_tty	kernel/tty.c	/^PUBLIC void task_tty() {$/;"	f	typeref:typename:PUBLIC void
+ticks	include/global.h	/^EXTERN	int ticks;$/;"	v	typeref:typename:EXTERN int
+ticks	include/proc.h	/^	int ticks;                 \/* remained ticks *\/$/;"	m	struct:s_proc	typeref:typename:int
 times	boot/boot.asm	/^times 	510-($-$$)	db	0	; 填充剩下的空间，使生成的二进制代码恰好为512字节$/;"	l
 trap	include/protect.h	/^	u16	trap;$/;"	m	struct:s_tss	typeref:typename:u16
-tss	include/global.h	/^EXTERN	TSS		tss;$/;"	v	typeref:typename:EXTERN TSS
-tty_do_read	kernel/tty.c	/^PRIVATE void tty_do_read(TTY* p_tty)$/;"	f	typeref:typename:PRIVATE void
-tty_do_write	kernel/tty.c	/^PRIVATE void tty_do_write(TTY* p_tty)$/;"	f	typeref:typename:PRIVATE void
-tty_table	kernel/global.c	/^PUBLIC	TTY		tty_table[NR_CONSOLES];$/;"	v	typeref:typename:PUBLIC TTY[]
+tss	include/global.h	/^EXTERN	TSS tss;$/;"	v	typeref:typename:EXTERN TSS
+tty_do_read	kernel/tty.c	/^PRIVATE void tty_do_read(TTY* p_tty) {$/;"	f	typeref:typename:PRIVATE void
+tty_do_write	kernel/tty.c	/^PRIVATE void tty_do_write(TTY* p_tty) {$/;"	f	typeref:typename:PRIVATE void
+tty_table	kernel/global.c	/^PUBLIC TTY tty_table[NR_CONSOLES];$/;"	v	typeref:typename:PUBLIC TTY[]
 u16	include/type.h	/^typedef	unsigned short		u16;$/;"	t	typeref:typename:unsigned short
 u32	include/type.h	/^typedef	unsigned int		u32;$/;"	t	typeref:typename:unsigned int
 u8	include/type.h	/^typedef	unsigned char		u8;$/;"	t	typeref:typename:unsigned char
-user_proc_table	kernel/global.c	/^PUBLIC  TASK    user_proc_table[NR_PROCS] = {$/;"	v	typeref:typename:PUBLIC TASK[]
-v_mem_limit	include/console.h	/^	unsigned int	v_mem_limit;		\/* 当前控制台占的显存大小 *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
+user_proc_table	kernel/global.c	/^PUBLIC TASK user_proc_table[NR_PROCS] = {$/;"	v	typeref:typename:PUBLIC TASK[]
+v_mem_limit	include/console.h	/^	unsigned int v_mem_limit;		\/* 当前控制台占的显存大小 *\/$/;"	m	struct:s_console	typeref:typename:unsigned int
 version	.vscode/c_cpp_properties.json	/^    "version": 4$/;"	n
 vir2phys	include/protect.h	/^#define vir2phys(/;"	d
 wRootDirSizeForLoop	boot/boot.asm	/^wRootDirSizeForLoop	dw	RootDirSectors	; Root Directory 占用的扇区数, 在循环中会递减/;"	d

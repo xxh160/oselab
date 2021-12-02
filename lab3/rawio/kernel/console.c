@@ -69,9 +69,9 @@ PUBLIC void init_screen(TTY* p_tty) {
 }
 
 
-void refresh() {
-	int i = 0;
+PUBLIC void refresh() {
 	CONSOLE *p_console = &console_table[nr_current_console];
+	disp_str("?");
 	while (p_console->cursor != p_console->original_addr) {
 		out_char(p_console, '\b');		
 	}
