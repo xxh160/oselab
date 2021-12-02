@@ -71,13 +71,10 @@ PUBLIC void init_screen(TTY* p_tty) {
 
 PUBLIC void refresh() {
 	CONSOLE *p_console = &console_table[nr_current_console];
-	disp_str("?");
-	disable_int();
 	out_char(p_console, '\b');		
 	while (p_console->cursor != p_console->original_addr) {
 		out_char(p_console, '\b');		
 	}
-	enable_int();	
 }
 
 /*======================================================================*
@@ -92,6 +89,7 @@ PUBLIC int is_current_console(CONSOLE* p_con) {
 			   out_char
  *======================================================================*/
 PUBLIC void out_char(CONSOLE* p_con, char ch) {
+	disp_str("?");
 	u8* p_vmem = (u8*)(V_MEM_BASE + p_con->cursor * 2);
 
 	switch(ch) {
