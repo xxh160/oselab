@@ -79,7 +79,6 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 	u8 *ta_start = (u8 *)(V_MEM_BASE + start_cursor * 2);		
 	u8 *ta_end = (u8 *)(V_MEM_BASE + cur_cursor * 2);
 	int len = ta_end - ta_start;
-	disp_int(end_addr - start_addr);
 	int i = 0;
 	while (i < end_addr - start_addr) {
 		int cur_start = i;
