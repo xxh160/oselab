@@ -66,7 +66,7 @@ PRIVATE void init_tty(TTY* p_tty) {
 PUBLIC void in_process(TTY* p_tty, u32 key) {
 	char output[2] = {'\0', '\0'};
 
-	disp_int(key);
+	disp_int(key & MASK_RAW);
 	// hwd: 若 key & FLAG_EXT 为假, 则为可打印字符
 	if (!(key & FLAG_EXT)) {
 		put_key(p_tty, key);
