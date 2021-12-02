@@ -78,6 +78,8 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 	u8 *end_addr = (u8 *)(V_MEM_BASE + start_cursor * 2);
 	u8 *ta_start = (u8 *)(V_MEM_BASE + start_cursor * 2);		
 	u8 *ta_end = (u8 *)(V_MEM_BASE + cur_cursor * 2);
+	disp_int((u32)start_addr);
+	disp_int((u32)end_addr);
 	int len = ta_end - ta_start;
 	int i = 0;
 	while (i < end_addr - start_addr) {
@@ -89,7 +91,6 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 			if (match_len == len) break;
 		}
 		if (match_len == len) {
-			disp_str("match");
 			int cur_end = cur_start + match_len;
 			while (cur_start < cur_end) {
 				*(start_addr + cur_start + 1) = RED_CHAR_COLOR;
