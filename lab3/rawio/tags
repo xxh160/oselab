@@ -421,6 +421,7 @@ SHIFT_L	include/keyboard.h	/^#define SHIFT_L	/;"	d
 SHIFT_R	include/keyboard.h	/^#define SHIFT_R	/;"	d
 SLEEP	include/keyboard.h	/^#define SLEEP	/;"	d
 STACK_FRAME	include/proc.h	/^} STACK_FRAME;$/;"	t	typeref:struct:s_stackframe
+STACK_SIZE_REFRESH	include/proc.h	/^#define STACK_SIZE_REFRESH /;"	d
 STACK_SIZE_TESTA	include/proc.h	/^#define STACK_SIZE_TESTA	/;"	d
 STACK_SIZE_TESTB	include/proc.h	/^#define STACK_SIZE_TESTB	/;"	d
 STACK_SIZE_TESTC	include/proc.h	/^#define STACK_SIZE_TESTC	/;"	d
@@ -445,7 +446,7 @@ TTY	include/tty.h	/^} TTY;$/;"	t	typeref:struct:s_tty
 TTY_END	kernel/tty.c	/^#define TTY_END	/;"	d	file:
 TTY_FIRST	kernel/tty.c	/^#define TTY_FIRST	/;"	d	file:
 TTY_IN_BYTES	include/tty.h	/^#define TTY_IN_BYTES /;"	d
-Task_refresh	kernel/main.c	/^void Task_refresh() {$/;"	f	typeref:typename:void
+TestA	kernel/main.c	/^void TestA() {$/;"	f	typeref:typename:void
 TestB	kernel/main.c	/^void TestB() {$/;"	f	typeref:typename:void
 TestC	kernel/main.c	/^void TestC() {$/;"	f	typeref:typename:void
 TopOfStack	boot/loader.asm	/^TopOfStack	equ	BaseOfLoaderPhyAddr + $	; 栈顶$/;"	d
@@ -755,9 +756,9 @@ is_current_console	kernel/console.c	/^PUBLIC int is_current_console(CONSOLE* p_c
 itoa	lib/klib.c	/^PUBLIC char * itoa(char * str, int num)\/* 数字前面的 0 不被显示出来, 比如 0000B800/;"	f	typeref:typename:PUBLIC char *
 jmp	boot/loader.asm	/^jmp	LABEL_START		; Start$/;"	l
 k_reenter	include/global.h	/^EXTERN	u32	k_reenter;$/;"	v	typeref:typename:EXTERN u32
-kb_ack	kernel/keyboard.c	/^PRIVATE void kb_ack()$/;"	f	typeref:typename:PRIVATE void
+kb_ack	kernel/keyboard.c	/^PRIVATE void kb_ack() {$/;"	f	typeref:typename:PRIVATE void
 kb_in	kernel/keyboard.c	/^PRIVATE KB_INPUT kb_in;$/;"	v	typeref:typename:PRIVATE KB_INPUT
-kb_wait	kernel/keyboard.c	/^PRIVATE void kb_wait()	\/* 等待 8042 的输入缓冲区空 *\/$/;"	f	typeref:typename:PRIVATE void
+kb_wait	kernel/keyboard.c	/^PRIVATE void kb_wait() {$/;"	f	typeref:typename:PRIVATE void
 kernel/clock.o	Makefile	/^kernel\/clock.o: kernel\/clock.c$/;"	t
 kernel/console.o	Makefile	/^kernel\/console.o: kernel\/console.c$/;"	t
 kernel/global.o	Makefile	/^kernel\/global.o: kernel\/global.c include\/type.h include\/const.h include\/protect.h include\//;"	t
@@ -863,7 +864,6 @@ push	kernel/kernel.asm	/^        push    ds      ;  |$/;"	d
 put_irq_handler	kernel/i8259.c	/^PUBLIC void put_irq_handler(int irq, irq_handler handler)$/;"	f	typeref:typename:PUBLIC void
 put_key	kernel/tty.c	/^PRIVATE void put_key(TTY* p_tty, u32 key) {$/;"	f	typeref:typename:PRIVATE void
 realclean	Makefile	/^realclean:$/;"	t
-refresh	kernel/console.c	/^PUBLIC void refresh() {$/;"	f	typeref:typename:PUBLIC void
 regs	include/proc.h	/^	STACK_FRAME regs;          \/* process registers saved in stack frame *\/$/;"	m	struct:s_proc	typeref:typename:STACK_FRAME
 restart	kernel/kernel.asm	/^restart:$/;"	l
 restart_reenter	kernel/kernel.asm	/^restart_reenter:$/;"	l
@@ -910,6 +910,7 @@ szMemChkTitle	boot/loader.asm	/^szMemChkTitle		equ	BaseOfLoaderPhyAddr + _szMemC
 szRAMSize	boot/loader.asm	/^szRAMSize		equ	BaseOfLoaderPhyAddr + _szRAMSize$/;"	d
 szReturn	boot/loader.asm	/^szReturn		equ	BaseOfLoaderPhyAddr + _szReturn$/;"	d
 task_f	include/type.h	/^typedef	void	(*task_f)	();$/;"	t	typeref:typename:void (*)()
+task_refresh	kernel/console.c	/^PUBLIC void task_refresh() {$/;"	f	typeref:typename:PUBLIC void
 task_stack	kernel/global.c	/^PUBLIC char	task_stack[STACK_SIZE_TOTAL];$/;"	v	typeref:typename:PUBLIC char[]
 task_table	kernel/global.c	/^PUBLIC TASK task_table[NR_TASKS] = {$/;"	v	typeref:typename:PUBLIC TASK[]
 task_tty	kernel/tty.c	/^PUBLIC void task_tty() {$/;"	f	typeref:typename:PUBLIC void

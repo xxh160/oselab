@@ -20,11 +20,12 @@
 PUBLIC PROCESS proc_table[NR_TASKS + NR_PROCS];
 
 PUBLIC TASK task_table[NR_TASKS] = {
-	{task_tty, STACK_SIZE_TTY, "tty"}
+	{task_tty, STACK_SIZE_TTY, "tty"},
+	{task_refresh, STACK_SIZE_REFRESH, "Task_refresh"},
 };
 
 PUBLIC TASK user_proc_table[NR_PROCS] = {
-	{Task_refresh, STACK_SIZE_TESTA, "Task_refresh"},
+	{TestA, STACK_SIZE_TESTA, "TestA"},
 	{TestB, STACK_SIZE_TESTB, "TestB"},
 	{TestC, STACK_SIZE_TESTC, "TestC"}
 };

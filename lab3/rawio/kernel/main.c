@@ -37,7 +37,7 @@ PUBLIC int kernel_main() {
 			p_task    = user_proc_table + (i - NR_TASKS);
       privilege = PRIVILEGE_USER;
       rpl       = RPL_USER;
-      eflags    = 0x1202; /* IF=1, bit 2 is always 1 */
+      eflags    = 0x202; /* IF=1, bit 2 is always 1 */
     }
 
 		strcpy(p_proc->p_name, p_task->name);	// name of the process
@@ -87,22 +87,14 @@ PUBLIC int kernel_main() {
 	}
 }
 
-/*======================================================================*
-                               TestA
- *======================================================================*/
-void Task_refresh() {
-	CONSOLE *p_console = &console_table[nr_current_console];
-	while (1) {
-		while (p_console->cursor != p_console->original_addr) {
-			out_char(p_console, 'a');		
-		}
-		milli_delay(5000);
+void TestA() {
+	int i = 0x1000;
+	while(1){
+		/* disp_str("B."); */
+		milli_delay(10);
 	}
 }
 
-/*======================================================================*
-                               TestB
- *======================================================================*/
 void TestB() {
 	int i = 0x1000;
 	while(1){
@@ -111,9 +103,6 @@ void TestB() {
 	}
 }
 
-/*======================================================================*
-                               TestB
- *======================================================================*/
 void TestC() {
 	int i = 0x2000;
 	while(1){
