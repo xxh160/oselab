@@ -285,6 +285,7 @@ PUBLIC void keyboard_read(TTY* p_tty) {
 							break;
 					}
 				}
+				disp_int(key);
 
 				key |= shift_l ? FLAG_SHIFT_L	: 0;
 				key |= shift_r ? FLAG_SHIFT_R	: 0;
