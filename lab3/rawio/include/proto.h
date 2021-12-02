@@ -22,7 +22,7 @@ PUBLIC void	delay(int time);
 void restart();
 
 /* main.c */
-void TestA();
+void Task_refresh();
 void TestB();
 void TestC();
 

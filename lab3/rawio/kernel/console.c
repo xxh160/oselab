@@ -60,6 +60,7 @@ PUBLIC void init_screen(TTY* p_tty) {
 	set_cursor(p_tty->p_console->cursor);
 	
 	// hwd: 清屏
+	// hwd: 此时 keyboard 还没有 init
 	if (nr_tty == 0) {
 		while (p_tty->p_console->cursor != p_tty->p_console->original_addr) {
 			out_char(p_tty->p_console, '\b');		
@@ -106,6 +107,8 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 				*(p_vmem-1) = DEFAULT_CHAR_COLOR;
 			}
 			break;
+		case '\t':	
+			
 		default:
 			if (p_con->cursor <
 					p_con->original_addr + p_con->v_mem_limit - 1) {

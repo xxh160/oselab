@@ -24,7 +24,7 @@ PUBLIC TASK task_table[NR_TASKS] = {
 };
 
 PUBLIC TASK user_proc_table[NR_PROCS] = {
-	{TestA, STACK_SIZE_TESTA, "TestA"},
+	{Task_refresh, STACK_SIZE_TESTA, "Task_refresh"},
 	{TestB, STACK_SIZE_TESTB, "TestB"},
 	{TestC, STACK_SIZE_TESTC, "TestC"}
 };
