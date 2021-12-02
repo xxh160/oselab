@@ -75,8 +75,8 @@ PUBLIC void task_refresh() {
 	while (1) {
 		// hwd: search mode 不清屏
 		if (is_search()) continue;
-		disp_str("not search");
 		milli_delay(10000);
+		if (is_search()) continue;
 		while (p_console->cursor != p_console->original_addr) {
 			out_char(p_console, '\b');		
 		}
