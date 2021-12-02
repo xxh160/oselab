@@ -117,11 +117,15 @@ PRIVATE void exit_search(TTY *p_tty) {
 	// hwd: 删除字符
 	u8 *ta_start = (u8 *)(V_MEM_BASE + start_cursor * 2);		
 	u8 *ta_end = (u8 *)(V_MEM_BASE + cur_cursor * 2);
-	int tar_len = ta_end - ta_start;
-	i = 0;
-	while (i < tar_len) {
+	u8 *ta_cur = ta_end;
+	while (ta_cur > ta_start) {
+		if (*(ta_cur - 1) == TAB_CHAR_COLOR) {
+			out_char(p_tty->p_console, '\b');
+			ta_cur -= 8;
+			continue;
+		}
 		out_char(p_tty->p_console, '\b');
-		i += 2;
+		ta_cur -= 2;
 	}
 }
 
