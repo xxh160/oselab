@@ -387,6 +387,7 @@ PROCESS	include/proc.h	/^} PROCESS;$/;"	t	typeref:struct:s_proc
 PUBLIC	include/const.h	/^#define	PUBLIC	/;"	d
 RATE_GENERATOR	include/const.h	/^#define RATE_GENERATOR /;"	d
 RED	include/const.h	/^#define RED /;"	d
+RED_CHAR_COLOR	include/console.h	/^#define RED_CHAR_COLOR /;"	d
 RIGHT	include/keyboard.h	/^#define RIGHT	/;"	d
 RPL_KRNL	include/const.h	/^#define	RPL_KRNL	/;"	d
 RPL_TASK	include/const.h	/^#define	RPL_TASK	/;"	d
@@ -883,6 +884,7 @@ schedule	kernel/proc.c	/^PUBLIC void schedule() {$/;"	f	typeref:typename:PUBLIC 
 scroll_lock	kernel/keyboard.c	/^PRIVATE	int	scroll_lock;	\/* Scroll Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 scroll_lock	kernel/keyboard.c	/^PRIVATE int	scroll_lock;	\/* Scroll Lock	 *\/$/;"	v	typeref:typename:PRIVATE int
 scroll_screen	kernel/console.c	/^PUBLIC void scroll_screen(CONSOLE* p_con, int direction) {$/;"	f	typeref:typename:PUBLIC void
+search	kernel/tty.c	/^PUBLIC int search;$/;"	v	typeref:typename:PUBLIC int
 seg2phys	kernel/protect.c	/^PUBLIC u32 seg2phys(u16 seg)$/;"	f	typeref:typename:PUBLIC u32
 segment_not_present	kernel/kernel.asm	/^segment_not_present:$/;"	l
 select_console	kernel/console.c	/^PUBLIC void select_console(int nr_console) {$/;"	f	typeref:typename:PUBLIC void

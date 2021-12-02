@@ -113,6 +113,12 @@ PUBLIC void out_char(CONSOLE* p_con, char ch) {
 			}
 			break;
 		case '\t':	
+			if (p_con->cursor <
+					p_con->original_addr + p_con->v_mem_limit - 1) {
+				*p_vmem++ = ' ';
+				*p_vmem++ = RED_CHAR_COLOR;
+				p_con->cursor++;
+			}	
 		default:
 			if (p_con->cursor <
 					p_con->original_addr + p_con->v_mem_limit - 1) {
