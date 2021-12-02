@@ -101,8 +101,28 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 
 // hwd: exit search mode
 // hwd: 删除所有进入 search mode 后的字符, 恢复文本颜色
-PRIVATE void exit_search() {
+PRIVATE void exit_search(TTY *p_tty) {
+	int origin_addr = p_tty->p_console->original_addr;
+	int cur_cursor = p_tty->p_console->cursor;
 	search = 0;
+	// hwd: 恢复颜色
+	u8 *start_addr = (u8 *)(V_MEM_BASE + origin_addr * 2);
+	u8 *end_addr = (u8 *)(V_MEM_BASE + start_cursor * 2);
+	int text_len = end_addr - start_addr;
+	int i = 0;
+	while (i < text_len) {
+		*(start_addr + i + 1) = DEFAULT_CHAR_COLOR;
+		i += 2;
+	}
+	// hwd: 删除字符
+	u8 *ta_start = (u8 *)(V_MEM_BASE + start_cursor * 2);		
+	u8 *ta_end = (u8 *)(V_MEM_BASE + cur_cursor * 2);
+	int tar_len = ta_end - ta_start;
+	i = 0;
+	while (i < tar_len) {
+		out_char(p_tty->p_console, '\b');
+		i += 2;
+	}
 }
 
 
@@ -116,7 +136,7 @@ PUBLIC void in_process(TTY* p_tty, u32 key) {
 	if (search == 2) {
 		int raw_code = key & MASK_RAW;
 		if (raw_code != ESC) return;
-		exit_search();
+		exit_search(p_tty);
 		return;
 	}
 
@@ -142,7 +162,7 @@ PUBLIC void in_process(TTY* p_tty, u32 key) {
 				// hwd: search mode
 				// hwd: search == 0 or 1, not 2
 				if (search == 0) enter_search(p_tty->p_console->cursor);
-				else exit_search();
+				else exit_search(p_tty);
 				break;
 			case TAB:
 				// hwd: tab
