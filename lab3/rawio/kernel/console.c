@@ -70,11 +70,7 @@ PUBLIC void init_screen(TTY* p_tty) {
 
 
 PUBLIC void refresh() {
-	CONSOLE *p_console = &console_table[nr_current_console];
-	out_char(p_console, '\b');		
-	while (p_console->cursor != p_console->original_addr) {
-		out_char(p_console, '\b');		
-	}
+	
 }
 
 /*======================================================================*
@@ -89,7 +85,6 @@ PUBLIC int is_current_console(CONSOLE* p_con) {
 			   out_char
  *======================================================================*/
 PUBLIC void out_char(CONSOLE* p_con, char ch) {
-	disp_str("?");
 	u8* p_vmem = (u8*)(V_MEM_BASE + p_con->cursor * 2);
 
 	switch(ch) {
@@ -190,16 +185,13 @@ PUBLIC void scroll_screen(CONSOLE* p_con, int direction) {
 		if (p_con->current_start_addr > p_con->original_addr) {
 			p_con->current_start_addr -= SCREEN_WIDTH;
 		}
-	}
-	else if (direction == SCR_DN) {
+	} else if (direction == SCR_DN) {
 		if (p_con->current_start_addr + SCREEN_SIZE <
 		    p_con->original_addr + p_con->v_mem_limit) {
 			p_con->current_start_addr += SCREEN_WIDTH;
 		}
+	} else {
 	}
-	else{
-	}
-
 	set_video_start_addr(p_con->current_start_addr);
 	set_cursor(p_con->cursor);
 }
