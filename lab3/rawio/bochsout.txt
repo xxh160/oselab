@@ -32,7 +32,7 @@
 00000000000i[      ]   Sound support: no
 00000000000i[      ]   USB support: UHCI
 00000000000i[      ]   VGA extension support: vbe
-00000000000i[MEM0  ] allocated memory at 0x7fd0ec672010. after alignment, vector=0x7fd0ec673000
+00000000000i[MEM0  ] allocated memory at 0x7f49e9a18010. after alignment, vector=0x7f49e9a19000
 00000000000i[MEM0  ] 32.00MB
 00000000000i[MEM0  ] mem block size = 0x00020000, blocks=256
 00000000000i[MEM0  ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
@@ -43,7 +43,7 @@
 00000000000i[DEV   ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLUGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS  ] Using local time for initial clock
-00000000000i[CMOS  ] Setting initial clock to: Thu Dec  2 15:34:21 2021 (time0=1638430461)
+00000000000i[CMOS  ] Setting initial clock to: Thu Dec  2 15:35:23 2021 (time0=1638430523)
 00000000000i[PLUGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA   ] channel 4 used by cascade
 00000000000i[PLUGIN] init_dev of 'pic' plugin device by virtual method
@@ -189,7 +189,7 @@
 00000322277i[BIOS  ] ram_end=32MB
 00000362837i[BIOS  ] Found 1 cpu(s)
 00000376489i[BIOS  ] bios_table_addr: 0x000f9db8 end=0x000fcc00
-00000605980i[XGUI  ] charmap update. Font is 9 x 16
+00000607712i[XGUI  ] charmap update. Font is 9 x 16
 00000704310i[PCI   ] i440FX PMC write to PAM register 59 (TLB Flush)
 00001032240i[P2ISA ] PCI IRQ routing: PIRQA# set to 0x0b
 00001032259i[P2ISA ] PCI IRQ routing: PIRQB# set to 0x09
@@ -225,35 +225,30 @@
 00001551608i[BXVGA ] VBE known Display Interface b0c0
 00001551640i[BXVGA ] VBE known Display Interface b0c5
 00001554283i[VBIOS ] VBE Bios $Id: vbe.c 228 2020-01-02 23:09:02Z vruppert $
-00002279972i[XGUI  ] charmap update. Font is 9 x 16
+00002488380i[XGUI  ] charmap update. Font is 9 x 16
 00014040188i[BIOS  ] Booting from 0000:7c00
-00079264000i[KBD   ] internal keyboard buffer full, ignoring scancode.(a1)
-00079264000i[KBD   ] internal keyboard buffer full, ignoring scancode.(21)
-00079264000i[KBD   ] internal keyboard buffer full, ignoring scancode.(a1)
-00079264000i[KBD   ] internal keyboard buffer full, ignoring scancode.(21)
-00080420000i[KBD   ] internal keyboard buffer full, ignoring scancode.(a1)
-00080420000i[KBD   ] internal keyboard buffer full, ignoring scancode.(21)
-00080420000i[KBD   ] internal keyboard buffer full, ignoring scancode.(a1)
-00080420000i[KBD   ] internal keyboard buffer full, ignoring scancode.(21)
-00102736000i[      ] Ctrl-C detected in signal handler.
-00102736000i[      ] dbg: Quit
-00102736000i[CPU0  ] CPU is in protected mode (active)
-00102736000i[CPU0  ] CS.mode = 32 bit
-00102736000i[CPU0  ] SS.mode = 32 bit
-00102736000i[CPU0  ] EFER   = 0x00000000
-00102736000i[CPU0  ] | EAX=00035000  EBX=00035000  ECX=00000000  EDX=00000000
-00102736000i[CPU0  ] | ESP=00046c94  EBP=00046cac  ESI=40fd468a  EDI=01e3e900
-00102736000i[CPU0  ] | IOPL=1 id vip vif ac vm rf nt of df IF tf sf zf AF PF cf
-00102736000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
-00102736000i[CPU0  ] |  CS:0005( 0000| 1|  1) 00000000 ffffffff 1 1
-00102736000i[CPU0  ] |  DS:000d( 0001| 1|  1) 00000000 ffffffff 1 1
-00102736000i[CPU0  ] |  SS:000d( 0001| 1|  1) 00000000 ffffffff 1 1
-00102736000i[CPU0  ] |  ES:000d( 0001| 1|  1) 00000000 ffffffff 1 1
-00102736000i[CPU0  ] |  FS:000d( 0001| 1|  1) 00000000 ffffffff 1 1
-00102736000i[CPU0  ] |  GS:0019( 0003| 0|  1) 000b8000 0000ffff 0 0
-00102736000i[CPU0  ] | EIP=000315ed (000315ed)
-00102736000i[CPU0  ] | CR0=0xe0000011 CR2=0x00000000
-00102736000i[CPU0  ] | CR3=0x00200000 CR4=0x00000000
-00102736000i[CMOS  ] Last time is 1638430486 (Thu Dec  2 15:34:46 2021)
-00102736000i[XGUI  ] Exit
-00102736000i[SIM   ] quit_sim called with exit code 0
+00063016000i[KBD   ] internal keyboard buffer full, ignoring scancode.(ae)
+00063016000i[KBD   ] internal keyboard buffer full, ignoring scancode.(2e)
+00102064476i[      ] Ctrl-C detected in signal handler.
+00102064476i[      ] Ctrl-C detected in signal handler.
+00102064477i[      ] dbg: Quit
+00102064477i[CPU0  ] CPU is in protected mode (active)
+00102064477i[CPU0  ] CS.mode = 32 bit
+00102064477i[CPU0  ] SS.mode = 32 bit
+00102064477i[CPU0  ] EFER   = 0x00000000
+00102064477i[CPU0  ] | EAX=000007eb  EBX=00035000  ECX=e900c483  EDX=000001ef
+00102064477i[CPU0  ] | ESP=0003ec94  EBP=0003ecac  ESI=10eb1846  EDI=8801b002
+00102064477i[CPU0  ] | IOPL=1 id vip vif ac vm rf nt of df IF tf sf zf af pf cf
+00102064477i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
+00102064477i[CPU0  ] |  CS:0005( 0000| 1|  1) 00000000 ffffffff 1 1
+00102064477i[CPU0  ] |  DS:000d( 0001| 1|  1) 00000000 ffffffff 1 1
+00102064477i[CPU0  ] |  SS:000d( 0001| 1|  1) 00000000 ffffffff 1 1
+00102064477i[CPU0  ] |  ES:000d( 0001| 1|  1) 00000000 ffffffff 1 1
+00102064477i[CPU0  ] |  FS:000d( 0001| 1|  1) 00000000 ffffffff 1 1
+00102064477i[CPU0  ] |  GS:0019( 0003| 0|  1) 000b8000 0000ffff 0 0
+00102064477i[CPU0  ] | EIP=00030b3a (00030b3a)
+00102064477i[CPU0  ] | CR0=0xe0000011 CR2=0x00000000
+00102064477i[CPU0  ] | CR3=0x00200000 CR4=0x00000000
+00102064477i[CMOS  ] Last time is 1638430548 (Thu Dec  2 15:35:48 2021)
+00102064477i[XGUI  ] Exit
+00102064477i[SIM   ] quit_sim called with exit code 0
