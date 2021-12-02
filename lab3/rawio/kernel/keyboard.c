@@ -105,6 +105,7 @@ PUBLIC void keyboard_read(TTY* p_tty) {
 		code_with_E0 = 0;
 
 		scan_code = get_byte_from_kbuf();
+		disp_int(scan_code);
 
 		/* 下面开始解析扫描码 */
 		// hwd: preprocess
@@ -285,7 +286,6 @@ PUBLIC void keyboard_read(TTY* p_tty) {
 							break;
 					}
 				}
-				disp_int(key);
 
 				key |= shift_l ? FLAG_SHIFT_L	: 0;
 				key |= shift_r ? FLAG_SHIFT_R	: 0;
