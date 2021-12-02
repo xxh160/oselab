@@ -82,7 +82,6 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 	int tar_len = ta_end - ta_start;
 	int i = 0;
 	while (i < text_len) {
-		disp_int(i);
 		int cur_start = i;
 		int match_len = 0;
 		while (*(start_addr + i) == *(ta_start + match_len)) {
@@ -96,7 +95,7 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 				*(start_addr + cur_start + 1) = RED_CHAR_COLOR;
 				cur_start += 2;
 			}	
-		}
+		} else i += 2;
 	}
 }
 
