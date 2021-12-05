@@ -1,6 +1,9 @@
 .PHONY: commit push
 
-commit:
+clean:
+	@git rm . --cached -r
+
+commit: clean
 	@git add .
 	@git commit -m "update"
 
