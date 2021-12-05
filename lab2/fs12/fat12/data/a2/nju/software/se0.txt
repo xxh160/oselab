@@ -1,2 +1,0 @@
-00000010
-document is always right.
