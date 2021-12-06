@@ -84,6 +84,7 @@ PRIVATE void match(int origin_addr, int cur_cursor) {
 	while (i < text_len) {
 		int cur_start = i;
 		int match_len = 0;
+		// hwd: 这里加一行匹配背景颜色, 区分空格和 tab
 		while (*(start_addr + i) == *(ta_start + match_len)) {
 			i += 2;	
 			match_len += 2;
