@@ -3,7 +3,7 @@
 clean:
 	@git rm . --cached -r
 
-commit: clean
+commit: 
 	@git add .
 	@git commit -m "update"
 
