@@ -2,8 +2,6 @@
 # Makefile for Orange'S #
 #########################
 
-# Rubbish Makefile
-
 # Entry point of Orange'S
 # It must have the same value with 'KernelEntryPointPhyAddr' in load.inc!
 ENTRYPOINT  = 0x30400
@@ -14,7 +12,7 @@ ENTRYOFFSET	= 0x400
 
 # Programs, flags, etc.
 ASM		      = nasm
-DASM	      = ndisasm
+DASM		    = ndisasm
 CC		      = gcc
 LD		      = ld
 ASMBFLAGS	  = -I boot/include/
@@ -23,59 +21,77 @@ CFLAGS		  = -I include/ -c -fno-builtin -m32 -fno-stack-protector
 LDFLAGS		  = -s -Ttext $(ENTRYPOINT) -m elf_i386
 DASMFLAGS	  = -u -o $(ENTRYPOINT) -e $(ENTRYOFFSET)
 
+ifdef RF 
+CFLAGS += -D RF=1
+endif
+
+ifdef WF 
+CFLAGS += -D WF=1 
+endif
+
+ifdef FAIR 
+CFLAGS += -D FAIR=1
+endif
+
 # This Program
 ORANGESBOOT	  = boot/boot.bin boot/loader.bin
 ORANGESKERNEL	= kernel.bin
-OBJS		      = kernel/kernel.o kernel/syscall.o kernel/start.o kernel/main.o\
-								kernel/clock.o kernel/keyboard.o kernel/tty.o kernel/console.o\
+OBJS		      = kernel/kernel.o kernel/syscall.o kernel/start.o kernel/main.o kernel/clock.o\
 								kernel/i8259.o kernel/global.o kernel/protect.o kernel/proc.o\
 								lib/kliba.o lib/klib.o lib/string.o
 DASMOUTPUT	  = kernel.bin.asm
 MOUNT_DIR     = ./floppy
 
 # All Phony Targets
-.PHONY : everything final image clean realclean disasm all buildimg
+.PHONY : run commit everything final image clean realclean disasm all buildimg
 
 # Default starting position
-nop:
-	@echo "why not \`make image' huh? :)"
+# nop :
+#   @echo "why not \`make image' huh? :)"
 
-everything: $(ORANGESBOOT) $(ORANGESKERNEL)
+run: realclean image
+	bochs -f bochsrc -q
 
-all: realclean everything
+commit: realclean
+	git add .
+	git commit -m "update"
 
-image: realclean everything clean buildimg
+everything : $(ORANGESBOOT) $(ORANGESKERNEL)
 
-clean:
+all : realclean everything
+
+image : realclean everything clean buildimg
+
+clean :
 	rm -f $(OBJS)
 
-realclean:
+realclean :
 	rm -f $(OBJS) $(ORANGESBOOT) $(ORANGESKERNEL)
 
-disasm:
+disasm :
 	$(DASM) $(DASMFLAGS) $(ORANGESKERNEL) > $(DASMOUTPUT)
 
 # We assume that "a.img" exists in current folder
-buildimg:
+buildimg :
 	dd if=boot/boot.bin of=a.img bs=512 count=1 conv=notrunc
 	sudo mount -o loop a.img $(MOUNT_DIR)
 	sudo cp -fv boot/loader.bin $(MOUNT_DIR)
 	sudo cp -fv kernel.bin $(MOUNT_DIR)
 	sudo umount $(MOUNT_DIR)
 
-boot/boot.bin: boot/boot.asm boot/include/load.inc boot/include/fat12hdr.inc
+boot/boot.bin : boot/boot.asm boot/include/load.inc boot/include/fat12hdr.inc
 	$(ASM) $(ASMBFLAGS) -o $@ $<
 
-boot/loader.bin: boot/loader.asm boot/include/load.inc boot/include/fat12hdr.inc boot/include/pm.inc
+boot/loader.bin : boot/loader.asm boot/include/load.inc boot/include/fat12hdr.inc boot/include/pm.inc
 	$(ASM) $(ASMBFLAGS) -o $@ $<
 
-$(ORANGESKERNEL): $(OBJS)
+$(ORANGESKERNEL) : $(OBJS)
 	$(LD) $(LDFLAGS) -o $(ORANGESKERNEL) $(OBJS)
 
-kernel/kernel.o: kernel/kernel.asm include/sconst.inc
+kernel/kernel.o : kernel/kernel.asm include/sconst.inc
 	$(ASM) $(ASMKFLAGS) -o $@ $<
 
-kernel/syscall.o: kernel/syscall.asm include/sconst.inc
+kernel/syscall.o : kernel/syscall.asm include/sconst.inc
 	$(ASM) $(ASMKFLAGS) -o $@ $<
 
 kernel/start.o: kernel/start.c include/type.h include/const.h include/protect.h include/string.h include/proc.h include/proto.h \
@@ -87,15 +103,6 @@ kernel/main.o: kernel/main.c include/type.h include/const.h include/protect.h in
 	$(CC) $(CFLAGS) -o $@ $<
 
 kernel/clock.o: kernel/clock.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-kernel/keyboard.o: kernel/keyboard.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-kernel/tty.o: kernel/tty.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-kernel/console.o: kernel/console.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 kernel/i8259.o: kernel/i8259.c include/type.h include/const.h include/protect.h include/proto.h
@@ -116,8 +123,8 @@ lib/klib.o: lib/klib.c include/type.h include/const.h include/protect.h include/
 			include/global.h
 	$(CC) $(CFLAGS) -o $@ $<
 
-lib/kliba.o: lib/kliba.asm
+lib/kliba.o : lib/kliba.asm
 	$(ASM) $(ASMKFLAGS) -o $@ $<
 
-lib/string.o: lib/string.asm
+lib/string.o : lib/string.asm
 	$(ASM) $(ASMKFLAGS) -o $@ $<

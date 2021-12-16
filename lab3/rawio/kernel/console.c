@@ -64,7 +64,7 @@ PUBLIC void init_screen(TTY* p_tty) {
 	// hwd: 此时 keyboard 还没有 init
 	if (nr_tty == 0) {
 		while (p_tty->p_console->cursor != p_tty->p_console->original_addr) {
-			out_char(p_tty->p_console, '\b');		
+			out_char(p_tty->p_console, '\b');
 		}
 	}
 }

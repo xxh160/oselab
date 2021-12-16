@@ -1,0 +1,138 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/start.o",
+      "kernel/start.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/start.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/start.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/main.o",
+      "kernel/main.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/main.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/clock.o",
+      "kernel/clock.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/clock.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/clock.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/i8259.o",
+      "kernel/i8259.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/i8259.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/i8259.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/global.o",
+      "kernel/global.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/global.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/global.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/protect.o",
+      "kernel/protect.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/protect.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/protect.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "kernel/proc.o",
+      "kernel/proc.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/proc.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/kernel/proc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I",
+      "include/",
+      "-c",
+      "-fno-builtin",
+      "-m32",
+      "-fno-stack-protector",
+      "-o",
+      "lib/klib.o",
+      "lib/klib.c"
+    ],
+    "directory": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc",
+    "file": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/lib/klib.c",
+    "output": "/home/xiayi/Mine/code/workspace/oselab/lab4/multiproc/lib/klib.o"
+  }
+]
