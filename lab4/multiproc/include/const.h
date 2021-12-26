@@ -1,8 +1,8 @@
 #ifndef	_ORANGES_CONST_H_
 #define	_ORANGES_CONST_H_
 
-// #define DEBUG
-#define TIME_SLICE_M 50
+#define DEBUG
+#define TIME_SLICE_M 5
 
 /* EXTERN */
 #define	EXTERN extern	/* EXTERN is defined as extern except in global.c */

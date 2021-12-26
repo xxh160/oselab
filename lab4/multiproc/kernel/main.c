@@ -86,11 +86,16 @@ PUBLIC int kernel_main() {
 	while(1) {}
 }
 
+#define MAX_RC 2
+
 extern int rc, wc;
 extern int write_pid;
 extern int writing;
 
+// hwd: rm 读者锁 wm 写者锁 s 公平锁 rcm 读者数量锁 wcm 写者数量锁
 PRIVATE semaphore_t rm, wm, s, rcm, wcm;
+// hwd: 限制读者数量的锁
+PRIVATE semaphore_t b;
 PRIVATE int red = 0x04;
 
 // hwd: HZ == 10, 1s 10 个 ticks, 100ms 一个 tick
@@ -114,12 +119,30 @@ void process_init() {
 	n[0] = 's';
 	n[1] = 0;
 	init_sem(&s, 1, n);
+	n[0] = 'b';
+	init_sem(&b, MAX_RC, n);
 	n[0] = 'r';
 	n[1] = 'c';
 	n[2] = 'm';
 	init_sem(&rcm, 1, n);
 	n[0] = 'w';
 	init_sem(&wcm, 1, n);
+
+	int has_printed = 0;
+#ifdef FAIR
+	char s[100] = { "fair. " };
+	print(s);
+	has_printed = 1;
+#endif
+#ifdef RF 
+	char s[100] = { "read first. " };
+	print(s);
+	has_printed = 1;
+#endif
+	if (has_printed == 0) {
+		char ss[100] = { "write first. " };
+		print(ss);
+	}
 	// hwd: 一直 sleep
 	milli_skip(ALWAYS_SKIP);
 
@@ -174,6 +197,7 @@ PRIVATE void read_rf(char *str, int delay) {
 #ifdef FAIR
 	p(&s);
 #endif
+	p(&b);
 	p(&rcm);
 	if (rc == 0) p(&wm);
 	++rc;
@@ -187,6 +211,7 @@ PRIVATE void read_rf(char *str, int delay) {
 	--rc;
 	if (rc == 0) v(&wm);
 	v(&rcm);
+	v(&b);
 	pf(str);
 }
 
@@ -210,6 +235,7 @@ PRIVATE void write_rf(char *str, int delay) {
 
 PRIVATE void read_wf(char *str, int delay) {
 	prr(str);
+	p(&b);
 	p(&rm);
 	p(&rcm);
 	if (rc == 0) p(&wm);
@@ -222,6 +248,7 @@ PRIVATE void read_wf(char *str, int delay) {
 	--rc;
 	if (rc == 0) v(&wm);
 	v(&rcm);
+	v(&b);
 	pf(str);
 }
 

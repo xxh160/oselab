@@ -34,11 +34,11 @@ PUBLIC void clock_handler(int irq) {
 	--p_proc_ready->ticks;
 	dec_proc_skip();
 
-#ifdef DEBUG
-	disp_color_str("$TICK:", 0x05);
-	disp_int(ticks);
-	disp_color_str("$ ", 0x05);
-#endif
+// #ifdef DEBUG
+	// disp_color_str("$", 0x05);
+	// disp_int(ticks);
+	// disp_color_str("$ ", 0x05);
+// #endif
 
 	// hwd: 5 ticks == 1 个时间片
 	// if (ticks % 2 * TIME_SLICE_M == 0 && p_proc_ready->pid != 0) {
@@ -48,19 +48,19 @@ PUBLIC void clock_handler(int irq) {
 
 	// hwd: 中断嵌套
 	if (k_reenter != 0) {
-#ifdef DEBUG
-		disp_str("reenter! back to ");
-		disp_str(p_proc_ready->p_name);
-		disp_str(". ");
-#endif
+// #ifdef DEBUG
+//     disp_str("reenter! back to ");
+//     disp_str(p_proc_ready->p_name);
+//     disp_str(". ");
+// #endif
 		return;
 	}
 
 	if (p_proc_ready->ticks > 0) {
-#ifdef DEBUG
-		disp_str(p_proc_ready->p_name);
-		disp_str(" running. ");
-#endif
+// #ifdef DEBUG
+//     disp_str(p_proc_ready->p_name);
+//     disp_str(" running. ");
+// #endif
 		return;
 	}
 
